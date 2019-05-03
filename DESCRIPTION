@@ -14,7 +14,8 @@ Imports:
     purrr,
     curl,
     glue,
-    jsonlite
+    jsonlite,
+    crayon
 RoxygenNote: 6.1.1
 Suggests: 
     spelling

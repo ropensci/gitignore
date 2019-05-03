@@ -30,7 +30,7 @@ gitignore_fetch_ignore_templates <- function(template_name) {
   i <- template_name %in% l
 
   if (!all(i)) {
-    stop("Some template_name were not found on gitignore.io: ", paste(template_name[!i], collapse = ", "))
+    stop("Some template_name were not found on gitignore.io: ", crayon::red$bold(paste(template_name[!i], collapse = ", ")))
   }
 
   # Fetch the gitirnore data
