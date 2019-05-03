@@ -15,3 +15,10 @@ A gitignore template.
 \description{
 Fetch the git ignore template from gitignore.io
 }
+\examples{
+# Fetch template for the R language
+gitignore_fetch_ignore_templates("R")
+
+# You can combine many templates at once
+gitignore_fetch_ignore_templates(c("R", "python", "java"))
+}
