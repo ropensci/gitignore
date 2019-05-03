@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 [![Travis build status](https://travis-ci.org/PMassicotte/gitignore.svg?branch=master)](https://travis-ci.org/PMassicotte/gitignore)
 <!-- badges: end -->
 
-The package `gitignore` provides a simple interface to the [gitignore.io](https://gitignore.io/) API. It can be used to fetch gitignore templates that can be included into the `.gitignore` file of you git repository.
+The package `gitignore` provides a simple R interface to the [gitignore.io](https://gitignore.io/) API. It can be used to fetch gitignore templates that can be included into the `.gitignore` file of you git repository.
 
 ## Installation
 
@@ -36,7 +36,6 @@ Or the dev version with:
 ```{r, eval=FALSE}
 devtools::install_github("pmassicotte/gitignore")
 ```
-
 
 ## Examples
 

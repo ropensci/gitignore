@@ -15,7 +15,7 @@ status](https://ci.appveyor.com/api/projects/status/github/PMassicotte/gitignore
 status](https://travis-ci.org/PMassicotte/gitignore.svg?branch=master)](https://travis-ci.org/PMassicotte/gitignore)
 <!-- badges: end -->
 
-The package `gitignore` provides a simple interface to the
+The package `gitignore` provides a simple R interface to the
 [gitignore.io](https://gitignore.io/) API. It can be used to fetch
 gitignore templates that can be included into the `.gitignore` file of
 you git repository.
