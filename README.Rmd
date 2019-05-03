@@ -35,7 +35,19 @@ This is a basic example which shows you how to solve a common problem:
 # devtools::install_github("pmassicotte/gitignore")
 library(gitignore)
 
-gitignore_fetch_available_templates()
+head(gitignore_fetch_available_templates(), 25)
 
+```
+
+Templates can be fecthed using the `gitignore_fetch_ignore()` function.
+
+```{r, results='markup', comment=""}
 gitignore_fetch_ignore("R")
 ```
+
+Multiple templates can be fetched by specifying multiple values:
+
+```{r, results='markup', comment=""}
+gitignore_fetch_ignore(c("java", "c++"))
+```
+
