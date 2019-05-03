@@ -5,9 +5,20 @@
 
 <!-- badges: start -->
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version/gitignore)](https://cran.r-project.org/package=gitignore)
+[![License: GPL
+v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/PMassicotte/gitignore?branch=master&svg=true)](https://ci.appveyor.com/project/PMassicotte/gitignore)
+[![Travis build
+status](https://travis-ci.org/PMassicotte/gitignore.svg?branch=master)](https://travis-ci.org/PMassicotte/gitignore)
 <!-- badges: end -->
 
-The goal of gitignore is to …
+The package `gitignore` provides a simple interface to the
+[gitignore.io](https://gitignore.io/) API. It can be used to fetch
+gitignore templates that can be included into the `.gitignore` file of
+you git repository.
 
 ## Installation
 
@@ -15,15 +26,20 @@ You can install the released version of gitignore from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("gitignore")
+install.packages("gitignore") # Not currently published on CRAN
 ```
 
-## Example
+Or the dev version with:
+
+``` r
+devtools::install_github("pmassicotte/gitignore")
+```
+
+## Examples
 
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-# devtools::install_github("pmassicotte/gitignore")
 library(gitignore)
 
 head(gitignore_fetch_available_templates(), 25)
@@ -160,3 +176,9 @@ hs_err_pid*
 
 # End of https://www.gitignore.io/api/java,c++
 ```
+
+## Code of conduct
+
+Please note that the ‘gitignore’ project is released with a [Contributor
+Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
+you agree to abide by its terms.

@@ -1,14 +1,13 @@
 Package: gitignore
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Fetch gitignore Templates from gitignore.io
 Version: 0.1.0.9000
 Authors@R: c(person("Philippe", 
          "Massicotte", 
          email = "pmassicotte@hotmail.com",
          role = c("aut", "cre")))
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: GPL (>= 3)
+Description: Simple interface to query gitignore.io to fetch gitignore templates that can be included in the .gitginore file. More than 450 templates are currently available.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports: 
