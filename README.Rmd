@@ -34,6 +34,7 @@ install.packages("gitignore") # Not currently published on CRAN
 Or the dev version with: 
 
 ```{r, eval=FALSE}
+install.packages("devtools")
 devtools::install_github("pmassicotte/gitignore")
 ```
 
@@ -44,11 +45,10 @@ There are currently two useful functions in the package:
 - `gitignore_fetch_available_templates()` to fetch all supported gitignore templates.
 - `gitignore_fetch_ignore_templates()` to fetch one or many gitignore templates.
 
-```{r example}
+```{r}
 library(gitignore)
 
 head(gitignore_fetch_available_templates(), 25)
-
 ```
 
 Templates can be fecthed using the `gitignore_fetch_ignore_templates()` function.

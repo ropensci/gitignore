@@ -32,6 +32,7 @@ install.packages("gitignore") # Not currently published on CRAN
 Or the dev version with:
 
 ``` r
+install.packages("devtools")
 devtools::install_github("pmassicotte/gitignore")
 ```
 
