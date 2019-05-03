@@ -6,7 +6,7 @@
 #' @export
 #'
 #' @examples
-gitignore_fetch_ignore <- function(template_name) {
+gitignore_fetch_ignore_templates <- function(template_name) {
 
   # template_name <- c("java", "sdf", "asdsdf", "R")
 

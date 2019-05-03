@@ -37,7 +37,14 @@ devtools::install_github("pmassicotte/gitignore")
 
 ## Examples
 
-This is a basic example which shows you how to solve a common problem:
+There are currently two useful functions in the package:
+
+  - `gitignore_fetch_available_templates()` to fetch all supported
+    gitignore templates.
+  - `gitignore_fetch_ignore_templates()` to fetch one or many gitignore
+    templates.
+
+<!-- end list -->
 
 ``` r
 library(gitignore)
@@ -54,10 +61,11 @@ head(gitignore_fetch_available_templates(), 25)
 #> [25] "aptanastudio"
 ```
 
-Templates can be fecthed using the `gitignore_fetch_ignore()` function.
+Templates can be fecthed using the `gitignore_fetch_ignore_templates()`
+function.
 
 ``` r
-gitignore_fetch_ignore("R")
+gitignore_fetch_ignore_templates("R")
 
 # Created by https://www.gitignore.io/api/r
 # Edit at https://www.gitignore.io/?templates=r
@@ -110,7 +118,7 @@ vignettes/*.pdf
 Multiple templates can be fetched by specifying multiple values:
 
 ``` r
-gitignore_fetch_ignore(c("java", "c++"))
+gitignore_fetch_ignore_templates(c("java", "c++"))
 
 # Created by https://www.gitignore.io/api/java,c++
 # Edit at https://www.gitignore.io/?templates=java,c++
