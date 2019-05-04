@@ -7,6 +7,8 @@ Authors@R: c(person("Philippe",
          email = "pmassicotte@hotmail.com",
          role = c("aut", "cre")))
 Description: Simple interface to query gitignore.io to fetch gitignore templates that can be included in the .gitignore file. More than 450 templates are currently available.
+URL: https://github.com/PMassicotte/gitignore
+BugReports: https://github.com/PMassicotte/gitignore/issues
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
