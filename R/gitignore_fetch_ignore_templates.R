@@ -1,4 +1,4 @@
-#' Fetch the git ignore template from gitignore.io
+#' Fetch gitignore template(s) from gitignore.io
 #'
 #' @param template_name A character vector with values included in `gitignore_fetch_available_templates()`.
 #' @param copy_to_clipboard Logical, should the returned template(s) be copied to the clipboard? Otherwise, it will be printed in the console.
@@ -34,11 +34,12 @@ gitignore_fetch_ignore_templates <- function(template_name, copy_to_clipboard = 
     stop("Some template_name were not found on gitignore.io: ", crayon::red$bold(paste(template_name[!i], collapse = ", ")))
   }
 
-  # Fetch the gitirnore data
+  # Fetch the gitignore data
   template_name <- paste(template_name, collapse = ",")
 
   r <- curl::curl_fetch_memory(glue::glue("https://www.gitignore.io/api/{template_name}"))
 
+  # Copy or not into the clipboard
   if (copy_to_clipboard && clipr::clipr_available()) {
     clipr::write_clip(rawToChar(r$content))
     cat(crayon::green(clisymbols::symbol$bullet), "Copied to the clipboard. You can now paste it in your .gitignore file.")

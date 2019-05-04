@@ -2,7 +2,7 @@
 % Please edit documentation in R/gitignore_fetch_ignore_templates.R
 \name{gitignore_fetch_ignore_templates}
 \alias{gitignore_fetch_ignore_templates}
-\title{Fetch the git ignore template from gitignore.io}
+\title{Fetch gitignore template(s) from gitignore.io}
 \usage{
 gitignore_fetch_ignore_templates(template_name, copy_to_clipboard = TRUE)
 }
@@ -15,7 +15,7 @@ gitignore_fetch_ignore_templates(template_name, copy_to_clipboard = TRUE)
 A gitignore template.
 }
 \description{
-Fetch the git ignore template from gitignore.io
+Fetch gitignore template(s) from gitignore.io
 }
 \examples{
 # Fetch template for the R language
