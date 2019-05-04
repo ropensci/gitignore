@@ -18,9 +18,10 @@ gitignore_fetch_ignore_templates <- function(template_name, copy_to_clipboard = 
 
   # Check if vector of char
   stopifnot(
-    is.atomic(template_name), # Check if ok
+    is.atomic(template_name),
     is.character(template_name),
-    is.atomic(template_name) || is.list(template_name)
+    is.atomic(template_name) || is.list(template_name),
+    is.logical(copy_to_clipboard)
   )
 
   template_name <- tolower(template_name)
