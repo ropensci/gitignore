@@ -15,7 +15,9 @@ Imports:
     curl,
     glue,
     jsonlite,
-    crayon
+    crayon,
+    clipr,
+    clisymbols
 RoxygenNote: 6.1.1
 Suggests: 
     spelling

@@ -4,10 +4,12 @@
 \alias{gitignore_fetch_ignore_templates}
 \title{Fetch the git ignore template from gitignore.io}
 \usage{
-gitignore_fetch_ignore_templates(template_name)
+gitignore_fetch_ignore_templates(template_name, copy_to_clipboard = TRUE)
 }
 \arguments{
 \item{template_name}{A character vector with values included in `gitignore_fetch_available_templates()`.}
+
+\item{copy_to_clipboard}{Logical, should the returned template(s) be copied to the clipboard? Otherwise, it will be printed in the console.}
 }
 \value{
 A gitignore template.
