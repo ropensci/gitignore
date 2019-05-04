@@ -44,7 +44,7 @@ gitignore_fetch_ignore_templates <- function(template_name, copy_to_clipboard = 
   if (copy_to_clipboard && clipr::clipr_available()) {
     clipr::write_clip(rawToChar(r$content))
     cat(crayon::green(clisymbols::symbol$bullet), "Copied to the clipboard. You can now paste it in your .gitignore file.")
-  } else {
-    writeLines(rawToChar(r$content))
   }
+
+  invisible(rawToChar(r$content))
 }
