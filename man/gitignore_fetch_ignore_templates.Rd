@@ -4,12 +4,15 @@
 \alias{gitignore_fetch_ignore_templates}
 \title{Fetch gitignore template(s) from gitignore.io}
 \usage{
-gitignore_fetch_ignore_templates(template_name, copy_to_clipboard = TRUE)
+gitignore_fetch_ignore_templates(template_name, copy_to_clipboard = TRUE,
+  append_gitignore = FALSE)
 }
 \arguments{
 \item{template_name}{A character vector with values included in `gitignore_fetch_available_templates()`.}
 
-\item{copy_to_clipboard}{Logical, should the returned template(s) be copied to the clipboard? Otherwise, it will be printed in the console.}
+\item{copy_to_clipboard}{Logical. Should the returned template(s) be copied to the clipboard? Otherwise, it will be printed in the console.}
+
+\item{append_gitignore}{Logical. Should the .gitignore be modified to include the returned template(s)?}
 }
 \value{
 A gitignore template.
@@ -22,5 +25,8 @@ Fetch gitignore template(s) from gitignore.io
 gitignore_fetch_ignore_templates("R")
 
 # You can combine many templates at once
+gitignore_fetch_ignore_templates(c("R", "python", "java"))
+
+# The .gitignore file can be automatically modified with `append_gitignore = TRUE`
 gitignore_fetch_ignore_templates(c("R", "python", "java"))
 }

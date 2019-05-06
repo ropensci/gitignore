@@ -1,7 +1,8 @@
 #' Fetch gitignore template(s) from gitignore.io
 #'
 #' @param template_name A character vector with values included in `gitignore_fetch_available_templates()`.
-#' @param copy_to_clipboard Logical, should the returned template(s) be copied to the clipboard? Otherwise, it will be printed in the console.
+#' @param copy_to_clipboard Logical. Should the returned template(s) be copied to the clipboard? Otherwise, it will be printed in the console.
+#' @param append_gitignore Logical. Should the .gitignore be modified to include the returned template(s)?
 #'
 #' @return A gitignore template.
 #' @export
@@ -12,7 +13,10 @@
 #'
 #' # You can combine many templates at once
 #' gitignore_fetch_ignore_templates(c("R", "python", "java"))
-gitignore_fetch_ignore_templates <- function(template_name, copy_to_clipboard = TRUE) {
+#'
+#' # The .gitignore file can be automatically modified with `append_gitignore = TRUE`
+#' gitignore_fetch_ignore_templates(c("R", "python", "java"))
+gitignore_fetch_ignore_templates <- function(template_name, copy_to_clipboard = TRUE, append_gitignore = FALSE) {
 
   # template_name <- c("java", "sdf", "asdsdf", "R")
 
@@ -21,7 +25,8 @@ gitignore_fetch_ignore_templates <- function(template_name, copy_to_clipboard = 
     is.atomic(template_name),
     is.character(template_name),
     is.atomic(template_name) || is.list(template_name),
-    is.logical(copy_to_clipboard)
+    is.logical(copy_to_clipboard),
+    is.logical(append_gitignore)
   )
 
   template_name <- tolower(template_name)
@@ -43,7 +48,11 @@ gitignore_fetch_ignore_templates <- function(template_name, copy_to_clipboard = 
   # Copy or not into the clipboard
   if (copy_to_clipboard && clipr::clipr_available()) {
     clipr::write_clip(rawToChar(r$content))
-    cat(crayon::green(clisymbols::symbol$bullet), "Copied to the clipboard. You can now paste it in your .gitignore file.")
+    cat(crayon::green(clisymbols::symbol$bullet), "Copied to the clipboard. You can now paste it in your .gitignore file.\n")
+  }
+
+  if (append_gitignore) {
+    gitignore_write_gitignore(rawToChar(r$content))
   }
 
   invisible(rawToChar(r$content))
