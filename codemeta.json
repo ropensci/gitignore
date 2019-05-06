@@ -1,5 +1,8 @@
 {
-  "@context": ["https://doi.org/10.5063/schema/codemeta-2.0", "http://schema.org"],
+  "@context": [
+    "https://doi.org/10.5063/schema/codemeta-2.0",
+    "http://schema.org"
+  ],
   "@type": "SoftwareSourceCode",
   "identifier": "gitignore",
   "description": "Simple interface to query gitignore.io to fetch gitignore templates that can be included in the .gitignore file. More than 450 templates are currently available.",
@@ -46,6 +49,30 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=spelling"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "knitr",
+      "name": "knitr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=knitr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "rmarkdown",
+      "name": "rmarkdown",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=rmarkdown"
     }
   ],
   "softwareRequirements": [
@@ -159,6 +186,8 @@
     }
   ],
   "readme": "https://github.com/PMassicotte/gitignore/blob/master/README.md",
-  "fileSize": "11.286KB",
-  "contIntegration": ["https://ci.appveyor.com/project/PMassicotte/gitignore", "https://travis-ci.org/PMassicotte/gitignore"]
+  "contIntegration": [
+    "https://ci.appveyor.com/project/PMassicotte/gitignore",
+    "https://travis-ci.org/PMassicotte/gitignore"
+  ]
 }

@@ -24,5 +24,8 @@ Imports:
     xfun
 RoxygenNote: 6.1.1
 Suggests: 
-    spelling
+    spelling,
+    knitr,
+    rmarkdown
 Language: en-US
+VignetteBuilder: knitr
