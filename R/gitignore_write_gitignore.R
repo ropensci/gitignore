@@ -4,7 +4,6 @@
 #'
 #' @param new_lines Template returned by `gitignore_fetch_ignore_templates()`.
 gitignore_write_gitignore <- function(new_lines) {
-
   .gitignore_file <- here::here(".gitignore")
 
   if (!file.exists(.gitignore_file)) {
@@ -32,5 +31,4 @@ gitignore_write_gitignore <- function(new_lines) {
   xfun::write_utf8(all, .gitignore_file)
 
   cat(crayon::green(clisymbols::symbol$bullet), ".gitignore file successfully modified.\n")
-
 }

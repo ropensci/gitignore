@@ -1,0 +1,164 @@
+{
+  "@context": ["https://doi.org/10.5063/schema/codemeta-2.0", "http://schema.org"],
+  "@type": "SoftwareSourceCode",
+  "identifier": "gitignore",
+  "description": "Simple interface to query gitignore.io to fetch gitignore templates that can be included in the .gitignore file. More than 450 templates are currently available.",
+  "name": "gitignore: Create useful .gitignore files for your project",
+  "codeRepository": "https://github.com/PMassicotte/gitignore",
+  "issueTracker": "https://github.com/PMassicotte/gitignore/issues",
+  "license": "https://spdx.org/licenses/GPL-3.0",
+  "version": "0.1.0.9000",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "version": "3.6.0",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 3.6.0 (2019-04-26)",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Philippe",
+      "familyName": "Massicotte",
+      "email": "pmassicotte@hotmail.com"
+    }
+  ],
+  "contributor": {},
+  "copyrightHolder": {},
+  "funder": {},
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Philippe",
+      "familyName": "Massicotte",
+      "email": "pmassicotte@hotmail.com"
+    }
+  ],
+  "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "spelling",
+      "name": "spelling",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=spelling"
+    }
+  ],
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "purrr",
+      "name": "purrr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=purrr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "curl",
+      "name": "curl",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=curl"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "glue",
+      "name": "glue",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=glue"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "jsonlite",
+      "name": "jsonlite",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=jsonlite"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "crayon",
+      "name": "crayon",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=crayon"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "clipr",
+      "name": "clipr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=clipr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "clisymbols",
+      "name": "clisymbols",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=clisymbols"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "here",
+      "name": "here",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=here"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "xfun",
+      "name": "xfun",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=xfun"
+    }
+  ],
+  "readme": "https://github.com/PMassicotte/gitignore/blob/master/README.md",
+  "fileSize": "11.286KB",
+  "contIntegration": ["https://ci.appveyor.com/project/PMassicotte/gitignore", "https://travis-ci.org/PMassicotte/gitignore"]
+}
