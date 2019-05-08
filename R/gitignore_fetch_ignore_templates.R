@@ -9,14 +9,14 @@
 #'
 #' @examples
 #' # Fetch template for the R language
-#' gitignore_fetch_ignore_templates("R")
+#' gi_fetch_ignore_templates("R")
 #'
 #' # You can combine many templates at once
-#' gitignore_fetch_ignore_templates(c("R", "python", "java"))
+#' gi_fetch_ignore_templates(c("R", "python", "java"))
 #'
 #' # The .gitignore file can be automatically modified with `append_gitignore = TRUE`
-#' gitignore_fetch_ignore_templates(c("R", "python", "java"))
-gitignore_fetch_ignore_templates <- function(template_name, copy_to_clipboard = TRUE, append_gitignore = FALSE) {
+#' gi_fetch_ignore_templates(c("R", "python", "java"))
+gi_fetch_ignore_templates <- function(template_name, copy_to_clipboard = TRUE, append_gitignore = FALSE) {
 
   # template_name <- c("java", "sdf", "asdsdf", "R")
 
@@ -32,7 +32,7 @@ gitignore_fetch_ignore_templates <- function(template_name, copy_to_clipboard = 
   template_name <- tolower(template_name)
 
   # Check is all template_names exist, i.e. supported by gitignore.io
-  l <- gitignore_fetch_available_templates()
+  l <- gi_fetch_available_templates()
 
   i <- template_name %in% l
 
@@ -52,7 +52,7 @@ gitignore_fetch_ignore_templates <- function(template_name, copy_to_clipboard = 
   }
 
   if (append_gitignore) {
-    gitignore_write_gitignore(rawToChar(r$content))
+    gi_write_gitignore(rawToChar(r$content))
   }
 
   invisible(rawToChar(r$content))

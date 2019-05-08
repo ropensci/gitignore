@@ -2,8 +2,8 @@
 #'
 #' Use returned template(s) to append the existing .gitignore file.
 #'
-#' @param new_lines Template returned by `gitignore_fetch_ignore_templates()`.
-gitignore_write_gitignore <- function(new_lines) {
+#' @param new_lines Template returned by `gi_fetch_ignore_templates()`.
+gi_write_gitignore <- function(new_lines) {
   .gitignore_file <- here::here(".gitignore")
 
   if (!file.exists(.gitignore_file)) {

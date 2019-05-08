@@ -8,8 +8,8 @@
 #' @export
 #'
 #' @examples
-#' gitignore_fetch_available_templates()
-gitignore_fetch_available_templates <- function() {
+#' gi_fetch_available_templates()
+gi_fetch_available_templates <- function() {
   res <- curl::curl_fetch_memory("https://www.gitignore.io/api/list?format=json")
 
   # Something went wrong
