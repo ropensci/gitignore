@@ -1,0 +1,52 @@
+---
+title: "Introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Basic idea
+
+`gitignore` is a simple R package that provide an interface to query [gitignore.io](gitignore.io) to fetch gitignore templates that can be included in the .gitignore file. More than 450 templates are currently available. There are actually two functions in the package:
+
+- `gi_fetch_available_templates()`: to get a list of all templates available on [gitignore.io](gitignore.io).
+- `gi_fetch_ignore_templates()`: to get one or more template(s). This function can copy the returned template(s) in the clipboard as well as happening the the `.gitignore` file in your project directory.
+
+## Examples
+
+```{r setup}
+library(gitignore)
+```
+
+Get the list of all available templates from [gitignore.io](gitignore.io):
+
+```{r}
+head(gi_fetch_available_templates(), 50)
+```
+
+The function `gi_fetch_ignore_templates()` can be used to fetch particular template(s). For example, one could want to get the `java` and `c++` templates as follow:
+
+```{r}
+gi_fetch_ignore_templates(c("java", "c++"))
+```
+
+By default, the template(s) are copied into the clipboard, this can be changed by setting `copy_to_clipboard = FALSE`:
+
+```{r}
+gi_fetch_ignore_templates(c("java", "c++"), copy_to_clipboard = FALSE)
+```
+
+Additionally, you can tell `gi_fetch_ignore_templates()` to append automatically the `.gitignore` file in your project by setting `append_gitignore = TRUE`:
+
+```{r, eval=FALSE}
+gi_fetch_ignore_templates(c("java", "c++"), append_gitignore = TRUE)
+```
