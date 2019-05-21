@@ -3,8 +3,8 @@
 #' Use returned template(s) to append the existing .gitignore file.
 #'
 #' @param new_lines Template returned by `gi_fetch_ignore_templates()`.
-gi_write_gitignore <- function(new_lines) {
-  .gitignore_file <- here::here(".gitignore")
+#' @param .gitignore_file Path of the .gitignore file to modify.
+gi_write_gitignore <- function(new_lines, .gitignore_file  = here::here(".gitignore")) {
 
   if (!file.exists(.gitignore_file)) {
     cat(crayon::red(clisymbols::symbol$bullet), "The .gitignore file could not be found in the project directory", here::here(), "\n")
@@ -19,7 +19,7 @@ gi_write_gitignore <- function(new_lines) {
 
   if (length(new) == 0) {
     cat(crayon::yellow(clisymbols::symbol$bullet), "Nothing to be modified in the .gitignore file.\n")
-    return()
+    return(FALSE)
   }
 
   all <- c(existing_lines, new)
