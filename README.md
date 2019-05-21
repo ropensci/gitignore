@@ -13,6 +13,8 @@ v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/li
 status](https://ci.appveyor.com/api/projects/status/github/PMassicotte/gitignore?branch=master&svg=true)](https://ci.appveyor.com/project/PMassicotte/gitignore)
 [![Travis build
 status](https://travis-ci.org/PMassicotte/gitignore.svg?branch=master)](https://travis-ci.org/PMassicotte/gitignore)
+[![Codecov test
+coverage](https://codecov.io/gh/PMassicotte/gitignore/branch/master/graph/badge.svg)](https://codecov.io/gh/PMassicotte/gitignore?branch=master)
 <!-- badges: end -->
 
 The package `gitignore` provides a simple R interface to the
@@ -40,9 +42,9 @@ devtools::install_github("pmassicotte/gitignore")
 
 There are currently two useful functions in the package:
 
-  - `gitignore_fetch_available_templates()` to fetch all supported
-    gitignore templates.
-  - `gitignore_fetch_ignore_templates()` to fetch one or many gitignore
+  - `gi_fetch_available_templates()` to fetch all supported gitignore
+    templates.
+  - `gi_fetch_ignore_templates()` to fetch one or many gitignore
     templates.
 
 <!-- end list -->
@@ -50,7 +52,7 @@ There are currently two useful functions in the package:
 ``` r
 library(gitignore)
 
-head(gitignore_fetch_available_templates(), 25)
+head(gi_fetch_available_templates(), 25)
 #>  [1] "1c"                   "1c-bitrix"            "a-frame"             
 #>  [4] "actionscript"         "ada"                  "adobe"               
 #>  [7] "advancedinstaller"    "agda"                 "al"                  
@@ -62,128 +64,17 @@ head(gitignore_fetch_available_templates(), 25)
 #> [25] "aptanastudio"
 ```
 
-Templates can be fecthed using the `gitignore_fetch_ignore_templates()`
+Templates can be fecthed using the `gi_fetch_ignore_templates()`
 function.
 
 ``` r
-gitignore_fetch_ignore_templates("R")
-
-# Created by https://www.gitignore.io/api/r
-# Edit at https://www.gitignore.io/?templates=r
-
-### R ###
-# History files
-.Rhistory
-.Rapp.history
-
-# Session Data files
-.RData
-
-# User-specific files
-.Ruserdata
-
-# Example code in package build process
-*-Ex.R
-
-# Output files from R CMD build
-/*.tar.gz
-
-# Output files from R CMD check
-/*.Rcheck/
-
-# RStudio files
-.Rproj.user/
-
-# produced vignettes
-vignettes/*.html
-vignettes/*.pdf
-
-# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
-.httr-oauth
-
-# knitr and R markdown default cache directories
-/*_cache/
-/cache/
-
-# Temporary files created by R markdown
-*.utf8.md
-*.knit.md
-
-### R.Bookdown Stack ###
-# R package: bookdown caching files
-/*_files/
-
-# End of https://www.gitignore.io/api/r
+gi_fetch_ignore_templates("R")
 ```
 
 Multiple templates can be fetched by specifying multiple values:
 
 ``` r
-gitignore_fetch_ignore_templates(c("java", "c++"))
-
-# Created by https://www.gitignore.io/api/java,c++
-# Edit at https://www.gitignore.io/?templates=java,c++
-
-### C++ ###
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-### Java ###
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
-# End of https://www.gitignore.io/api/java,c++
+gi_fetch_ignore_templates(c("java", "c++"))
 ```
 
 ## Code of conduct
