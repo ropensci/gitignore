@@ -8,3 +8,4 @@
 ^codemeta\.json$
 ^doc$
 ^Meta$
+^codecov\.yml$

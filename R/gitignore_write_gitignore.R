@@ -7,17 +7,13 @@ gi_write_gitignore <- function(new_lines) {
   .gitignore_file <- here::here(".gitignore")
 
   if (!file.exists(.gitignore_file)) {
-    cat(crayon::red(clisymbols::symbol$bullet), "The .gitignore file could not be found in the project directory\n")
+    cat(crayon::red(clisymbols::symbol$bullet), "The .gitignore file could not be found in the project directory", here::here(), "\n")
     stop()
   }
 
   existing_lines <- readLines(.gitignore_file, warn = FALSE, encoding = "UTF-8")
 
-  # new_lines <- rawToChar(r$content)
-
   new_lines_splitted <- unlist(strsplit(new_lines, "\n"))
-  i <- grepl("^#", new_lines_splitted)
-  new_lines_splitted <- new_lines_splitted[!i]
 
   new <- setdiff(new_lines_splitted, existing_lines)
 

@@ -19,6 +19,7 @@ knitr::opts_chunk$set(
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/PMassicotte/gitignore?branch=master&svg=true)](https://ci.appveyor.com/project/PMassicotte/gitignore)
 [![Travis build status](https://travis-ci.org/PMassicotte/gitignore.svg?branch=master)](https://travis-ci.org/PMassicotte/gitignore)
+[![Codecov test coverage](https://codecov.io/gh/PMassicotte/gitignore/branch/master/graph/badge.svg)](https://codecov.io/gh/PMassicotte/gitignore?branch=master)
 <!-- badges: end -->
 
 The package `gitignore` provides a simple R interface to the [gitignore.io](https://gitignore.io/) API. It can be used to fetch gitignore templates that can be included into the `.gitignore` file of you git repository.
