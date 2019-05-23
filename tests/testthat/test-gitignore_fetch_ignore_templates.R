@@ -1,3 +1,7 @@
+is_clipr_available <- clipr::clipr_available()
+skip_msg <- "System clipboard is not available - skipping test."
+
+
 test_that("gi_fetch_ignore_templates inputs", {
   expect_error(gi_fetch_ignore_templates("a-non-valide-template"))
   expect_error(gi_fetch_ignore_templates("R", copy_to_clipboard = "A"))
@@ -19,4 +23,10 @@ test_that("gi_fetch_ignore_templates case do not matter", {
     gi_fetch_ignore_templates("c++"),
     gi_fetch_ignore_templates("C++")
   )
+})
+
+test_that("Template can be copied in the clipboard", {
+  skip_if_not(is_clipr_available, skip_msg)
+  expect_invisible(gi_fetch_ignore_templates("c"))
+
 })
