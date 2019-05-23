@@ -7,7 +7,16 @@ test_that("gi_fetch_ignore_templates inputs", {
 })
 
 test_that("gi_fetch_ignore_templates case do not matter", {
-  expect_equal(gi_fetch_ignore_templates("r"), gi_fetch_ignore_templates("R"))
-  expect_equal(gi_fetch_ignore_templates("c"), gi_fetch_ignore_templates("C"))
-  expect_equal(gi_fetch_ignore_templates("c++"), gi_fetch_ignore_templates("C++"))
+  expect_equal(
+    gi_fetch_ignore_templates("r"),
+    gi_fetch_ignore_templates("R")
+  )
+  expect_equal(
+    gi_fetch_ignore_templates("c"),
+    gi_fetch_ignore_templates("C")
+  )
+  expect_equal(
+    gi_fetch_ignore_templates("c++"),
+    gi_fetch_ignore_templates("C++")
+  )
 })

@@ -1,5 +1,4 @@
 test_that("no change in the gitignore file", {
-
   f <- tempfile(pattern = "", fileext = ".gitignore")
   file.create(f)
 
@@ -10,5 +9,4 @@ test_that("no change in the gitignore file", {
 
   # The second time it should not write anything
   expect_false(gi_write_gitignore(new_lines, f))
-
 })
