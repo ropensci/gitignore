@@ -10,7 +10,9 @@
 #' @examples
 #' gi_fetch_available_templates()
 gi_fetch_available_templates <-
-  function(url = "https://www.gitignore.io/api/list?format=json") {
+  function() {
+
+    url = "https://www.gitignore.io/api/list?format=json"
     res <- curl::curl_fetch_memory(url)
 
     r <- jsonlite::fromJSON(rawToChar(res$content))
