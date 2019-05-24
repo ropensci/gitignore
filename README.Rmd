@@ -43,25 +43,25 @@ devtools::install_github("pmassicotte/gitignore")
 
 There are currently two useful functions in the package:
 
-- `gi_fetch_available_templates()` to fetch all supported gitignore templates.
-- `gi_fetch_ignore_templates()` to fetch one or many gitignore templates.
+- `gi_available_templates()` to fetch all supported gitignore templates.
+- `gi_fetch_templates()` to fetch one or many gitignore templates.
 
 ```{r}
 library(gitignore)
 
-head(gi_fetch_available_templates(), 25)
+head(gi_available_templates(), 25)
 ```
 
-Templates can be fecthed using the `gi_fetch_ignore_templates()` function.
+Templates can be fecthed using the `gi_fetch_templates()` function.
 
 ```{r, results='markup', comment=""}
-gi_fetch_ignore_templates("R")
+gi_fetch_templates("R")
 ```
 
 Multiple templates can be fetched by specifying multiple values:
 
 ```{r, results='markup', comment=""}
-gi_fetch_ignore_templates(c("java", "c++"))
+gi_fetch_templates(c("java", "c++"))
 ```
 
 ## Code of conduct

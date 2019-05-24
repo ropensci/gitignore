@@ -2,7 +2,7 @@
 #'
 #' Use returned template(s) to append the existing .gitignore file.
 #'
-#' @param new_lines Template returned by `gi_fetch_ignore_templates()`.
+#' @param new_lines Template returned by `gi_fetch_templates()`.
 #' @param gitignore_file Path of the .gitignore file to modify.
 gi_write_gitignore <-
   function(new_lines,

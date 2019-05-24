@@ -307,15 +307,15 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <h2>Basic idea</h2>
 <p><code>gitignore</code> is a simple R package that provide an interface to query <a href="gitignore.io">gitignore.io</a> to fetch gitignore templates that can be included in the .gitignore file. More than 450 templates are currently available. There are actually two functions in the package:</p>
 <ul>
-<li><code>gi_fetch_available_templates()</code>: to get a list of all templates available on <a href="gitignore.io">gitignore.io</a>.</li>
-<li><code>gi_fetch_ignore_templates()</code>: to get one or more template(s). This function can copy the returned template(s) in the clipboard as well as happening the the <code>.gitignore</code> file in your project directory.</li>
+<li><code>gi_available_templates()</code>: to get a list of all templates available on <a href="gitignore.io">gitignore.io</a>.</li>
+<li><code>gi_fetch_templates()</code>: to get one or more template(s). This function can copy the returned template(s) in the clipboard as well as happening the the <code>.gitignore</code> file in your project directory.</li>
 </ul>
 </div>
 <div id="examples" class="section level2">
 <h2>Examples</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(gitignore)</a></code></pre></div>
 <p>Get the list of all available templates from <a href="gitignore.io">gitignore.io</a>:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">head</span>(<span class="kw">gi_fetch_available_templates</span>(), <span class="dv">50</span>)</a>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">head</span>(<span class="kw">gi_available_templates</span>(), <span class="dv">50</span>)</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">#&gt;  [1] &quot;1c&quot;                   &quot;1c-bitrix&quot;            &quot;a-frame&quot;             </span></a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt;  [4] &quot;actionscript&quot;         &quot;ada&quot;                  &quot;adobe&quot;               </span></a>
 <a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt;  [7] &quot;advancedinstaller&quot;    &quot;agda&quot;                 &quot;al&quot;                  </span></a>
@@ -333,12 +333,12 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt; [43] &quot;batch&quot;                &quot;bazaar&quot;               &quot;bazel&quot;               </span></a>
 <a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#&gt; [46] &quot;bitrise&quot;              &quot;bitrix&quot;               &quot;bittorrent&quot;          </span></a>
 <a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt; [49] &quot;blackbox&quot;             &quot;bloop&quot;</span></a></code></pre></div>
-<p>The function <code>gi_fetch_ignore_templates()</code> can be used to fetch particular template(s). For example, one could want to get the <code>java</code> and <code>c++</code> templates as follow:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">gi_fetch_ignore_templates</span>(<span class="kw">c</span>(<span class="st">&quot;java&quot;</span>, <span class="st">&quot;c++&quot;</span>))</a></code></pre></div>
+<p>The function <code>gi_fetch_templates()</code> can be used to fetch particular template(s). For example, one could want to get the <code>java</code> and <code>c++</code> templates as follow:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">gi_fetch_templates</span>(<span class="kw">c</span>(<span class="st">&quot;java&quot;</span>, <span class="st">&quot;c++&quot;</span>))</a></code></pre></div>
 <p>By default, the template(s) are copied into the clipboard, this can be changed by setting <code>copy_to_clipboard = FALSE</code>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">gi_fetch_ignore_templates</span>(<span class="kw">c</span>(<span class="st">&quot;java&quot;</span>, <span class="st">&quot;c++&quot;</span>), <span class="dt">copy_to_clipboard =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
-<p>Additionally, you can tell <code>gi_fetch_ignore_templates()</code> to append automatically the <code>.gitignore</code> file in your project by setting <code>append_gitignore = TRUE</code>:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">gi_fetch_ignore_templates</span>(<span class="kw">c</span>(<span class="st">&quot;java&quot;</span>, <span class="st">&quot;c++&quot;</span>), <span class="dt">append_gitignore =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">gi_fetch_templates</span>(<span class="kw">c</span>(<span class="st">&quot;java&quot;</span>, <span class="st">&quot;c++&quot;</span>), <span class="dt">copy_to_clipboard =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+<p>Additionally, you can tell <code>gi_fetch_templates()</code> to append automatically the <code>.gitignore</code> file in your project by setting <code>append_gitignore = TRUE</code>:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">gi_fetch_templates</span>(<span class="kw">c</span>(<span class="st">&quot;java&quot;</span>, <span class="st">&quot;c++&quot;</span>), <span class="dt">append_gitignore =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 </div>
 
 

@@ -8,8 +8,8 @@
 #' @export
 #'
 #' @examples
-#' gi_fetch_available_templates()
-gi_fetch_available_templates <-
+#' gi_available_templates()
+gi_available_templates <-
   function() {
 
     url = "https://www.gitignore.io/api/list?format=json"

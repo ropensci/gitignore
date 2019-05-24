@@ -2,7 +2,7 @@ test_that("no change in the gitignore file", {
   f <- tempfile(pattern = "", fileext = ".gitignore")
   file.create(f)
 
-  new_lines <- gi_fetch_ignore_templates("r")
+  new_lines <- gi_fetch_templates("r")
 
   # Write once
   gi_write_gitignore(new_lines, f)
@@ -14,7 +14,7 @@ test_that("no change in the gitignore file", {
 test_that(".gitignore file can not be found", {
   f <- tempfile(pattern = "", fileext = ".gitignore")
 
-  new_lines <- gi_fetch_ignore_templates("r")
+  new_lines <- gi_fetch_templates("r")
 
   expect_error(gi_write_gitignore(new_lines, f))
 
@@ -27,7 +27,7 @@ test_that(".gitignore file can not be found", {
 #
 #   f <- tempfile(pattern = "", fileext = ".gitignore")
 #
-#   template <- gi_fetch_ignore_templates("R", copy_to_clipboard = FALSE)
+#   template <- gi_fetch_templates("R", copy_to_clipboard = FALSE)
 #
 #   expect_true(gi_write_gitignore(template, f))
 #

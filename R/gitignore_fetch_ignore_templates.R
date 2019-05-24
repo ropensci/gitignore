@@ -10,14 +10,14 @@
 #'
 #' @examples
 #' # Fetch template for the R language
-#' gi_fetch_ignore_templates("R")
+#' gi_fetch_templates("R")
 #'
 #' # You can combine many templates at once
-#' gi_fetch_ignore_templates(c("R", "python", "java"))
+#' gi_fetch_templates(c("R", "python", "java"))
 #'
 #' # The .gitignore file can be automatically modified with `append_gitignore = TRUE`
-#' gi_fetch_ignore_templates(c("R", "python", "java"))
-gi_fetch_ignore_templates <-
+#' gi_fetch_templates(c("R", "python", "java"))
+gi_fetch_templates <-
   function(template_name,
              copy_to_clipboard = TRUE,
              append_gitignore = FALSE,
@@ -33,7 +33,7 @@ gi_fetch_ignore_templates <-
     template_name <- tolower(template_name)
 
     # Check is all template_names exist, i.e. supported by gitignore.io
-    l <- gi_fetch_available_templates()
+    l <- gi_available_templates()
 
     i <- template_name %in% l
 
