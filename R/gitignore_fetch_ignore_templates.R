@@ -59,6 +59,8 @@ gi_fetch_ignore_templates <-
           "You can now paste it in your .gitignore file.\n"
         )
       )
+    } else {
+      cat(rawToChar(r$content))
     }
 
     if (append_gitignore) {
