@@ -16,8 +16,20 @@ test_that(".gitignore file can not be found", {
 
   new_lines <- gi_fetch_ignore_templates("r")
 
-  # Write once
   expect_error(gi_write_gitignore(new_lines, f))
 
 
 })
+
+# That would be nice to test, but seems difficult with testthat because of: "menu() cannot be used non-interactively" error
+
+# test_that("A non existing .gitignore file can be created", {
+#
+#   f <- tempfile(pattern = "", fileext = ".gitignore")
+#
+#   template <- gi_fetch_ignore_templates("R", copy_to_clipboard = FALSE)
+#
+#   expect_true(gi_write_gitignore(template, f))
+#
+#
+# })

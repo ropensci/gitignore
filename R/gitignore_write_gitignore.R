@@ -56,4 +56,6 @@ gi_write_gitignore <-
       crayon::green(clisymbols::symbol$bullet),
       ".gitignore file successfully modified.\n"
     )
+
+    invisible(TRUE)
   }
