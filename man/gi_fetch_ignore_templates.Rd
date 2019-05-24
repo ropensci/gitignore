@@ -5,7 +5,7 @@
 \title{Fetch gitignore template(s) from gitignore.io}
 \usage{
 gi_fetch_ignore_templates(template_name, copy_to_clipboard = TRUE,
-  append_gitignore = FALSE)
+  append_gitignore = FALSE, gitignore_file = here::here(".gitignore"))
 }
 \arguments{
 \item{template_name}{A character vector with values included in `gitignore_fetch_available_templates()`.}
@@ -13,6 +13,8 @@ gi_fetch_ignore_templates(template_name, copy_to_clipboard = TRUE,
 \item{copy_to_clipboard}{Logical. Should the returned template(s) be copied to the clipboard? Otherwise, it will be printed in the console.}
 
 \item{append_gitignore}{Logical. Should the .gitignore be modified to include the returned template(s)?}
+
+\item{gitignore_file}{The path of the .gitignore file to be modified. By default, it will try to find it in the current package/project using `here::here(".gitignore")`.}
 }
 \value{
 A gitignore template.

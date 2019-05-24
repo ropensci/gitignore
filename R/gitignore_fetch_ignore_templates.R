@@ -3,6 +3,7 @@
 #' @param template_name A character vector with values included in `gitignore_fetch_available_templates()`.
 #' @param copy_to_clipboard Logical. Should the returned template(s) be copied to the clipboard? Otherwise, it will be printed in the console.
 #' @param append_gitignore Logical. Should the .gitignore be modified to include the returned template(s)?
+#' @param gitignore_file The path of the .gitignore file to be modified. By default, it will try to find it in the current package/project using `here::here(".gitignore")`.
 #'
 #' @return A gitignore template.
 #' @export
@@ -19,7 +20,8 @@
 gi_fetch_ignore_templates <-
   function(template_name,
              copy_to_clipboard = TRUE,
-             append_gitignore = FALSE) {
+             append_gitignore = FALSE,
+             gitignore_file = here::here(".gitignore")) {
 
     # Check if vector of char
     stopifnot(
@@ -64,7 +66,7 @@ gi_fetch_ignore_templates <-
     }
 
     if (append_gitignore) {
-      gi_write_gitignore(rawToChar(r$content))
+      gi_write_gitignore(rawToChar(r$content), gitignore_file)
     }
 
     invisible(rawToChar(r$content))
