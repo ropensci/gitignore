@@ -23,9 +23,7 @@ gi_fetch_ignore_templates <-
 
     # Check if vector of char
     stopifnot(
-      is.atomic(template_name),
       is.character(template_name),
-      is.atomic(template_name) || is.list(template_name),
       is.logical(copy_to_clipboard),
       is.logical(append_gitignore)
     )
