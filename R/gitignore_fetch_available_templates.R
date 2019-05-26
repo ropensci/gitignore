@@ -1,6 +1,6 @@
 #' Fetch available templates from gitignore.io
 #'
-#' This return list of all operating systems, IDE or programming languages supported by gitignore.io.
+#' This return list of all operating systems, IDE or programming languages supported by \url{https://gitignore.io/}.
 #'
 #' @details The returned list is returned as lower case characters.
 #'

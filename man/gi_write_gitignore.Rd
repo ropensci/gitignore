@@ -2,7 +2,7 @@
 % Please edit documentation in R/gitignore_write_gitignore.R
 \name{gi_write_gitignore}
 \alias{gi_write_gitignore}
-\title{Append .gitignore file}
+\title{Append or create a .gitignore file}
 \usage{
 gi_write_gitignore(new_lines, gitignore_file = here::here(".gitignore"))
 }
@@ -12,5 +12,5 @@ gi_write_gitignore(new_lines, gitignore_file = here::here(".gitignore"))
 \item{gitignore_file}{Path of the .gitignore file to modify.}
 }
 \description{
-Use returned template(s) to append the existing .gitignore file.
+Use the returned template(s) to append the existing .gitignore file.
 }
