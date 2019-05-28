@@ -54,10 +54,10 @@ gi_fetch_templates <-
     # Copy or not into the clipboard
     if (copy_to_clipboard && clipr::clipr_available()) {
       clipr::write_clip(rawToChar(r$content))
-      cat(
+      message(
         crayon::green(clisymbols::symbol$bullet),
         paste(
-          "Copied to the clipboard.",
+          " Copied to the clipboard.",
           "You can now paste it in your .gitignore file.\n"
         )
       )

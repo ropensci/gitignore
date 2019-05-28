@@ -18,9 +18,9 @@ gi_write_gitignore <-
     stopifnot(basename(gitignore_file) != ".gitignore")
 
     if (!file.exists(gitignore_file)) {
-      cat(
+      message(
         crayon::red(clisymbols::symbol$bullet),
-        "The .gitignore file could not be found in the project directory",
+        " The .gitignore file could not be found in the project directory",
         here::here(),
         "Would you like to create it?",
         "\n"
@@ -48,9 +48,9 @@ gi_write_gitignore <-
     new <- setdiff(fetched_template_splitted, existing_lines)
 
     if (length(new) == 0) {
-      cat(
+      message(
         crayon::yellow(clisymbols::symbol$bullet),
-        "Nothing to be modified in the .gitignore file.\n"
+        " Nothing to be modified in the .gitignore file.\n"
       )
       return(FALSE)
     }
@@ -59,9 +59,9 @@ gi_write_gitignore <-
 
     xfun::write_utf8(all, gitignore_file)
 
-    cat(
+    message(
       crayon::green(clisymbols::symbol$bullet),
-      ".gitignore file successfully modified.\n"
+      " .gitignore file successfully modified.\n"
     )
 
     invisible(TRUE)
