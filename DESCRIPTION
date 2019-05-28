@@ -1,6 +1,6 @@
 Type: Package
 Package: gitignore
-Title: Create useful .gitignore files for your project
+Title: Create Useful .gitignore Files for your Project
 Version: 0.1.0.9000
 Authors@R: 
     person(given = "Philippe",

@@ -4,7 +4,7 @@
 \name{gitignore-package}
 \alias{gitignore}
 \alias{gitignore-package}
-\title{gitignore: Create useful .gitignore files for your project}
+\title{gitignore: Create Useful .gitignore Files for your Project}
 \description{
 Simple interface to query gitignore.io to fetch
     gitignore templates that can be included in the .gitignore file. More
