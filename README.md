@@ -17,10 +17,21 @@ status](https://travis-ci.org/PMassicotte/gitignore.svg?branch=master)](https://
 coverage](https://codecov.io/gh/PMassicotte/gitignore/branch/master/graph/badge.svg)](https://codecov.io/gh/PMassicotte/gitignore?branch=master)
 <!-- badges: end -->
 
-The package `gitignore` provides a simple R interface to the
-[gitignore.io](https://gitignore.io/) API. It can be used to fetch
-gitignore templates that can be included into the `.gitignore` file of
-you git repository.
+Based on the definition proposed by
+[freecodecamp](https://guide.freecodecamp.org/git/gitignore/):
+
+> The .gitignore file is a text file that tells Git which files or
+> folders to ignore in a project. A local .gitignore file is usually
+> placed in the root directory of a project. You can also create a
+> global .gitignore file and any entries in that file will be ignored in
+> all of your Git repositories.
+
+For any project, it is therefore important to have a `.gitignore` file
+that is complete and accurate. The package `gitignore` provides a simple
+R interface to the [gitignore.io](https://gitignore.io/) API. It can be
+used to fetch gitignore templates that can be included into the
+`.gitignore` file of you git repository. The `gitignore` R package can
+be used with R package, R Studio project or with any `.gitignore` file.
 
 ## Installation
 
@@ -63,7 +74,7 @@ head(gi_available_templates(), 25)
 #> [25] "aptanastudio"
 ```
 
-Templates can be fecthed using the `gi_fetch_templates()` function.
+Templates can be fetched using the `gi_fetch_templates()` function.
 
 ``` r
 gi_fetch_templates("R")
