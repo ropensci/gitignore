@@ -35,14 +35,7 @@ be used with R package, R Studio project or with any `.gitignore` file.
 
 ## Installation
 
-You can install the released version of gitignore from
-[CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("gitignore") # Not currently published on CRAN
-```
-
-Or the dev version with:
+`gitignore` can be installed from GitHub:
 
 ``` r
 install.packages("devtools")
