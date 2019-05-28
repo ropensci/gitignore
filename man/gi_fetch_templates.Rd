@@ -8,7 +8,7 @@ gi_fetch_templates(template_name, copy_to_clipboard = TRUE,
   append_gitignore = FALSE, gitignore_file = here::here(".gitignore"))
 }
 \arguments{
-\item{template_name}{A character vector with values included in `gitignore_fetch_available_templates()`.}
+\item{template_name}{A character vector with values included in \code{\link{gi_available_templates}}.}
 
 \item{copy_to_clipboard}{Logical. Should the returned template(s) be copied to the clipboard? Otherwise, it will be printed in the console.}
 

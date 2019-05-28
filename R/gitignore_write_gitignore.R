@@ -1,6 +1,6 @@
-#' Append .gitignore file
+#' Append or create a .gitignore file
 #'
-#' Use returned template(s) to append the existing .gitignore file.
+#' Use the returned template(s) to append the existing .gitignore file.
 #'
 #' @param fetched_template Template(s) returned by `gi_fetch_templates()`.
 #' @param gitignore_file Path of the .gitignore file to modify.
