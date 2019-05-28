@@ -6,9 +6,11 @@
 #' @param gitignore_file Path of the .gitignore file to modify.
 #'
 #' @examples
+#' \dontrun{
 #' f <- tempfile(pattern = "", fileext = ".gitignore")
 #' new_lines <- gi_fetch_templates("r")
 #' gi_write_gitignore(new_lines, f)
+#' }
 gi_write_gitignore <-
   function(fetched_template,
              gitignore_file = here::here(".gitignore")) {
