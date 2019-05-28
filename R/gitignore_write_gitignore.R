@@ -2,10 +2,10 @@
 #'
 #' Use returned template(s) to append the existing .gitignore file.
 #'
-#' @param new_lines Template returned by `gi_fetch_templates()`.
+#' @param fetched_template Template(s) returned by `gi_fetch_templates()`.
 #' @param gitignore_file Path of the .gitignore file to modify.
 gi_write_gitignore <-
-  function(new_lines,
+  function(fetched_template,
              gitignore_file = here::here(".gitignore")) {
 
     stopifnot(basename(gitignore_file) != ".gitignore")
@@ -36,9 +36,9 @@ gi_write_gitignore <-
     existing_lines <-
       readLines(gitignore_file, warn = FALSE, encoding = "UTF-8")
 
-    new_lines_splitted <- unlist(strsplit(new_lines, "\n"))
+    fetched_template_splitted <- unlist(strsplit(fetched_template, "\n"))
 
-    new <- setdiff(new_lines_splitted, existing_lines)
+    new <- setdiff(fetched_template_splitted, existing_lines)
 
     if (length(new) == 0) {
       cat(

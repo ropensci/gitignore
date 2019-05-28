@@ -1,33 +1,37 @@
-Package: gitignore
 Type: Package
+Package: gitignore
 Title: Create useful .gitignore files for your project
 Version: 0.1.0.9000
-Authors@R: c(person("Philippe", 
-         "Massicotte", 
-         email = "pmassicotte@hotmail.com",
-         role = c("aut", "cre")))
-Description: Simple interface to query gitignore.io to fetch gitignore templates that can be included in the .gitignore file. More than 450 templates are currently available.
+Authors@R: 
+    person(given = "Philippe",
+           family = "Massicotte",
+           role = c("aut", "cre"),
+           email = "pmassicotte@hotmail.com")
+Description: Simple interface to query gitignore.io to fetch
+    gitignore templates that can be included in the .gitignore file. More
+    than 450 templates are currently available.
+License: GPL-3
 URL: https://github.com/PMassicotte/gitignore
 BugReports: https://github.com/PMassicotte/gitignore/issues
-License: GPL-3
-Encoding: UTF-8
-LazyData: true
 Imports: 
-    purrr,
-    curl,
-    glue,
-    jsonlite,
-    crayon,
     clipr,
     clisymbols,
+    crayon,
+    curl,
+    glue,
     here,
+    jsonlite,
+    purrr,
     xfun
-RoxygenNote: 6.1.1
 Suggests: 
-    spelling,
+    covr,
     knitr,
     rmarkdown,
-    testthat (>= 2.1.0),
-    covr
+    spelling,
+    testthat (>= 2.1.0)
+VignetteBuilder: 
+    knitr
+Encoding: UTF-8
 Language: en-US
-VignetteBuilder: knitr
+LazyData: true
+RoxygenNote: 6.1.1

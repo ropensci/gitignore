@@ -4,10 +4,11 @@
 \alias{gi_write_gitignore}
 \title{Append .gitignore file}
 \usage{
-gi_write_gitignore(new_lines, gitignore_file = here::here(".gitignore"))
+gi_write_gitignore(fetched_template,
+  gitignore_file = here::here(".gitignore"))
 }
 \arguments{
-\item{new_lines}{Template returned by `gi_fetch_templates()`.}
+\item{fetched_template}{Template(s) returned by `gi_fetch_templates()`.}
 
 \item{gitignore_file}{Path of the .gitignore file to modify.}
 }
