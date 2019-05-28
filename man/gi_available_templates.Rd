@@ -7,7 +7,7 @@
 gi_available_templates()
 }
 \value{
-A character vector with all templates supported by gitignore.io.
+A character with all templates supported by gitignore.io.
 }
 \description{
 This return list of all templates supported by gitignore.io.

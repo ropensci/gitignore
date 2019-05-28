@@ -4,7 +4,7 @@
 #'
 #' @details The returned list is returned as lower case characters.
 #'
-#' @return A character vector with all templates supported by gitignore.io.
+#' @return A character with all templates supported by gitignore.io.
 #' @export
 #'
 #' @examples

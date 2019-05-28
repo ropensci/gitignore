@@ -5,7 +5,7 @@
 #' @param append_gitignore Logical. Should the .gitignore be modified to include the returned template(s)?
 #' @param gitignore_file The path of the .gitignore file to be modified. By default, it will try to find it in the current package/project using `here::here(".gitignore")`.
 #'
-#' @return A gitignore template.
+#' @return A character containing gitignore template(s).
 #' @export
 #'
 #' @examples

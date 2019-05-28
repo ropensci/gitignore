@@ -17,7 +17,7 @@ gi_fetch_templates(template_name, copy_to_clipboard = TRUE,
 \item{gitignore_file}{The path of the .gitignore file to be modified. By default, it will try to find it in the current package/project using `here::here(".gitignore")`.}
 }
 \value{
-A gitignore template.
+A character containing gitignore template(s).
 }
 \description{
 Fetch gitignore template(s) from gitignore.io
