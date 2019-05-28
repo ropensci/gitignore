@@ -190,6 +190,15 @@ hs_err_pid*
 # End of https://www.gitignore.io/api/java,c++
 ```
 
+More examples are provided in the vignette.
+
+``` r
+browseVignettes("gitignore")
+```
+
+You can also visit the [gitignore
+website](http://www.pmassicotte.com/gitignore/).
+
 ## Code of conduct
 
 Please note that the ‘gitignore’ project is released with a [Contributor

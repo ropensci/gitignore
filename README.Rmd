@@ -68,6 +68,7 @@ More examples are provided in the vignette.
 browseVignettes("gitignore")
 ```
 
+You can also visit the [gitignore website](http://www.pmassicotte.com/gitignore/).
 
 ## Code of conduct
 
