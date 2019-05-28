@@ -8,14 +8,24 @@ knitr::opts_chunk$set(
 library(gitignore)
 
 ## ------------------------------------------------------------------------
-head(gitignore_fetch_available_templates(), 50)
+head(gi_available_templates(), 50)
 
 ## ------------------------------------------------------------------------
-gitignore_fetch_ignore_templates(c("java", "c++"))
-
-## ------------------------------------------------------------------------
-gitignore_fetch_ignore_templates(c("java", "c++"), copy_to_clipboard = FALSE)
+gi_fetch_templates(c("java", "c++"))
 
 ## ---- eval=FALSE---------------------------------------------------------
-#  gitignore_fetch_ignore_templates(c("java", "c++"), append_gitignore = TRUE)
+#  gi_fetch_templates(c("java", "c++"), copy_to_clipboard = FALSE)
+
+## ---- eval=FALSE---------------------------------------------------------
+#  gi_fetch_templates(c("R"), append_gitignore = TRUE)
+
+## ---- message=TRUE-------------------------------------------------------
+f <- tempfile(pattern = "", fileext = ".gitignore")
+
+file.create(f)
+
+gi_fetch_templates("R", gitignore_file = f, append_gitignore = TRUE)
+  
+readLines(f)
+  
 

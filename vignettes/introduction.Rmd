@@ -41,12 +41,26 @@ gi_fetch_templates(c("java", "c++"))
 
 By default, the template(s) are copied into the clipboard, this can be changed by setting `copy_to_clipboard = FALSE`:
 
-```{r}
+```{r, eval=FALSE}
 gi_fetch_templates(c("java", "c++"), copy_to_clipboard = FALSE)
 ```
 
 Additionally, you can tell `gi_fetch_templates()` to append automatically the `.gitignore` file in your project by setting `append_gitignore = TRUE`:
 
 ```{r, eval=FALSE}
-gi_fetch_templates(c("java", "c++"), append_gitignore = TRUE)
+gi_fetch_templates(c("R"), append_gitignore = TRUE)
 ```
+
+It is also possible to specify the `.gitignore` file to be modified by specifying the `gitignore_file` argument.
+
+```{r, message=TRUE}
+f <- tempfile(pattern = "", fileext = ".gitignore")
+
+file.create(f)
+
+gi_fetch_templates("R", gitignore_file = f, append_gitignore = TRUE)
+  
+readLines(f)
+  
+```
+
