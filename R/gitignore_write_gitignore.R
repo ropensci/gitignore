@@ -5,6 +5,8 @@
 #' @param fetched_template Template(s) returned by `gi_fetch_templates()`.
 #' @param gitignore_file Path of the .gitignore file to modify.
 #'
+#' @return TRUE if successed to write/append the .gitignore, FALSE otherwise.
+#'
 #' @examples
 #' \dontrun{
 #' f <- tempfile(pattern = "", fileext = ".gitignore")
