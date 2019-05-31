@@ -1,4 +1,4 @@
-is_clipr_available <- clipr::clipr_available()
+is_clipr_available <- clipr::clipr_available(allow_non_interactive = TRUE)
 skip_msg <- "System clipboard is not available - skipping test."
 
 
@@ -26,7 +26,14 @@ test_that("gi_fetch_templates case do not matter", {
 })
 
 test_that("Template can be copied in the clipboard", {
-  skip_if_not(is_clipr_available, skip_msg)
+  # skip_if_not(is_clipr_available, skip_msg)
   expect_invisible(gi_fetch_templates("c"))
 
+})
+
+test_that("A non existing .gitignore file can be created", {
+  f <- tempfile(pattern = "", fileext = ".gitignore")
+  file.create(f)
+
+  expect_invisible(gi_fetch_templates("R", copy_to_clipboard = FALSE, append_gitignore = TRUE, gitignore_file = f))
 })

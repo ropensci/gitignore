@@ -19,7 +19,7 @@ gi_write_gitignore <-
 
     stopifnot(basename(gitignore_file) != ".gitignore")
 
-    if (!file.exists(gitignore_file)) {
+    if (!file.exists(gitignore_file)) { # nocov start
       message(
         crayon::red(clisymbols::symbol$bullet),
         " The .gitignore file could not be found in the project directory",
@@ -40,7 +40,7 @@ gi_write_gitignore <-
           crayon::red$bold(gitignore_file)
         )
       }
-    }
+    } # nocov end
 
     existing_lines <-
       readLines(gitignore_file, warn = FALSE, encoding = "UTF-8")

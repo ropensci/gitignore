@@ -52,7 +52,7 @@ gi_fetch_templates <-
     )
 
     # Copy or not into the clipboard
-    if (copy_to_clipboard && clipr::clipr_available()) {
+    if (clipr::clipr_available() && copy_to_clipboard) {
       clipr::write_clip(rawToChar(r$content))
       message(
         crayon::green(clisymbols::symbol$bullet),
