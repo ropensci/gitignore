@@ -32,6 +32,12 @@ R interface to the [gitignore.io](https://gitignore.io/) API. It can be
 used to fetch gitignore templates that can be included into the
 `.gitignore` file of you git repository. The `gitignore` R package can
 be used with R package, R Studio project or with any `.gitignore` file.
+Note that be default, the `usethis` package populates the `.gitignore`
+for the R language when you create a R project. However, it is common to
+use many different programming languages in a project such as `LaTeX`,
+`python`, `matlab`, `julia` and so one. This is where the `gitignore`
+package shines as it can be used to programmatically modify the
+`.gitignore` file of your project.
 
 ## Installation
 
