@@ -2,11 +2,20 @@ Type: Package
 Package: gitignore
 Title: Create Useful .gitignore Files for your Project
 Version: 0.1.0.9000
-Authors@R: 
+Authors@R: c(
     person(given = "Philippe",
-           family = "Massicotte",
-           role = c("aut", "cre"),
-           email = "pmassicotte@hotmail.com")
+        family = "Massicotte",
+        role = c("aut", "cre"),
+        email = "pmassicotte@hotmail.com"),
+    person(given = "Amanda",
+        family = "Dobbyn",
+        role = "rev",
+        email = "amanda.e.dobbyn@gmail.com"),
+    person(given = "Mauro",
+        family = "Lepore",
+        role = "rev",
+        email = "maurolepore@gmail.com")
+    )
 Description: Simple interface to query gitignore.io to fetch
     gitignore templates that can be included in the .gitignore file. More
     than 450 templates are currently available.
