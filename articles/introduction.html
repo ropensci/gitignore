@@ -90,6 +90,11 @@
 <div id="basic-idea" class="section level2">
 <h2 class="hasAnchor">
 <a href="#basic-idea" class="anchor"></a>Basic idea</h2>
+<p>Based on the definition proposed by <a href="https://guide.freecodecamp.org/git/gitignore/">freecodecamp</a>:</p>
+<blockquote>
+<p>The .gitignore file is a text file that tells Git which files or folders to ignore in a project. A local .gitignore file is usually placed in the root directory of a project. You can also create a global .gitignore file and any entries in that file will be ignored in all of your Git repositories.</p>
+</blockquote>
+<p>For any project, it is therefore important to have a <code>.gitignore</code> file that is complete and accurate. The package <code>gitignore</code> provides a simple R interface to the <a href="https://gitignore.io/">gitignore.io</a> API. It can be used to fetch gitignore templates that can be included into the <code>.gitignore</code> file of you git repository. The <code>gitignore</code> R package can be used with R package, R Studio project or with any <code>.gitignore</code> file. Note that be default, the <code>usethis</code> package populates the <code>.gitignore</code> for the R language when you create a R project. However, it is common to use many different programming languages in a project such as <code>LaTeX</code>, <code>python</code>, <code>matlab</code>, <code>julia</code> and so one. This is where the <code>gitignore</code> package shines as it can be used to programmatically modify the <code>.gitignore</code> file of your project.</p>
 <p><code>gitignore</code> is a simple R package that provide an interface to query <a href="gitignore.io" class="uri">gitignore.io</a> to fetch gitignore templates that can be included in the .gitignore file. More than 450 templates are currently available. There are actually two functions in the package:</p>
 <ul>
 <li>
