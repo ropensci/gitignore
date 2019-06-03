@@ -1,9 +1,14 @@
 #' Fetch gitignore template(s) from gitignore.io
 #'
-#' @param template_name A character vector with values included in \code{\link{gi_available_templates}}.
-#' @param copy_to_clipboard Logical. Should the returned template(s) be copied to the clipboard? Otherwise, it will be printed in the console.
-#' @param append_gitignore Logical. Should the .gitignore be modified to include the returned template(s)?
-#' @param gitignore_file The path of the .gitignore file to be modified. By default, it will try to find it in the current package/project using `here::here(".gitignore")`.
+#' @param template_name A character vector with values included in
+#'   \code{\link{gi_available_templates}}.
+#' @param copy_to_clipboard Logical. Should the returned template(s) be copied
+#'   to the clipboard? Otherwise, it will be printed in the console.
+#' @param append_gitignore Logical. Should the .gitignore be modified to include
+#'   the returned template(s)?
+#' @param gitignore_file The path of the .gitignore file to be modified. By
+#'   default, it will try to find it in the current package/project using
+#'   `here::here(".gitignore")`.
 #'
 #' @return A character containing gitignore template(s).
 #' @export
