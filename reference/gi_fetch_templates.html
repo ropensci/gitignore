@@ -112,7 +112,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Fetch gitignore template(s) from gitignore.io</h1>
-    <small class="dont-index">Source: <a href='https://github.com/PMassicotte/gitignore/blob/master/R/gitignore_fetch_ignore_templates.R'><code>R/gitignore_fetch_ignore_templates.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/PMassicotte/gitignore/blob/master/R/gi_fetch_templates.R'><code>R/gi_fetch_templates.R</code></a></small>
     <div class="hidden name"><code>gi_fetch_templates.Rd</code></div>
     </div>
 
@@ -130,19 +130,24 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>template_name</th>
-      <td><p>A character vector with values included in <code><a href='gi_available_templates.html'>gi_available_templates</a></code>.</p></td>
+      <td><p>A character vector with values included in
+<code><a href='gi_available_templates.html'>gi_available_templates</a></code>.</p></td>
     </tr>
     <tr>
       <th>copy_to_clipboard</th>
-      <td><p>Logical. Should the returned template(s) be copied to the clipboard? Otherwise, it will be printed in the console.</p></td>
+      <td><p>Logical. Should the returned template(s) be copied
+to the clipboard? Otherwise, it will be printed in the console.</p></td>
     </tr>
     <tr>
       <th>append_gitignore</th>
-      <td><p>Logical. Should the .gitignore be modified to include the returned template(s)?</p></td>
+      <td><p>Logical. Should the .gitignore be modified to include
+the returned template(s)?</p></td>
     </tr>
     <tr>
       <th>gitignore_file</th>
-      <td><p>The path of the .gitignore file to be modified. By default, it will try to find it in the current package/project using `here::here(".gitignore")`.</p></td>
+      <td><p>The path of the .gitignore file to be modified. By
+default, it will try to find it in the current package/project using
+`here::here(".gitignore")`.</p></td>
     </tr>
     </table>
     
