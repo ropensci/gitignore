@@ -7,6 +7,8 @@
 #'
 #' @return TRUE if successed to write/append the .gitignore, FALSE otherwise.
 #'
+#' @export
+#'
 #' @examples
 #' \dontrun{
 #' f <- tempfile(pattern = "", fileext = ".gitignore")

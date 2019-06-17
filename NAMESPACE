@@ -2,3 +2,4 @@
 
 export(gi_available_templates)
 export(gi_fetch_templates)
+export(gi_write_gitignore)
