@@ -44,6 +44,8 @@ There are currently two useful functions in the package:
 - `gi_available_templates()` to fetch all supported gitignore templates.
 - `gi_fetch_templates()` to fetch one or many gitignore templates.
 
+Show the first 25 templates returned by `gi_available_templates()`.
+
 ```{r}
 library(gitignore)
 
@@ -61,6 +63,16 @@ Multiple templates can be fetched by specifying multiple values:
 ```{r, results='markup', comment=""}
 gi_fetch_templates(c("java", "c++"))
 ```
+
+By default, templates are copied into the clipboard. It is also possible to modify a `.gitignore` file using the `gi_write_gitignore()` function.
+
+```{r, eval=FALSE}
+f <- paste0(tempdir(), "/.gitignore")
+new_lines <- gi_fetch_templates("r")
+gi_write_gitignore(fetched_template = new_lines, gitignore_file = f)
+```
+
+If `gitignore_file` is not specified, `gitignore` will try to find the `.gitignore` file of your current project or package.
 
 More examples are provided in the vignette.
 

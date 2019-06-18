@@ -56,15 +56,15 @@ There are currently two useful functions in the package:
     templates.
   - `gi_fetch_templates()` to fetch one or many gitignore templates.
 
-<!-- end list -->
+Show the first 25 templates returned by `gi_available_templates()`.
 
 ``` r
 library(gitignore)
 
 head(gi_available_templates(), 25)
-#>  [1] "1c"                   "1c-bitrix"            "a-frame"             
-#>  [4] "actionscript"         "ada"                  "adobe"               
-#>  [7] "advancedinstaller"    "agda"                 "al"                  
+#>  [1] "1c"                   "1c-bitrix"            "actionscript"        
+#>  [4] "ada"                  "adobe"                "advancedinstaller"   
+#>  [7] "a-frame"              "agda"                 "al"                  
 #> [10] "alteraquartusii"      "altium"               "android"             
 #> [13] "androidstudio"        "angular"              "anjuta"              
 #> [16] "ansible"              "apachecordova"        "apachehadoop"        
@@ -86,6 +86,18 @@ Multiple templates can be fetched by specifying multiple values:
 gi_fetch_templates(c("java", "c++"))
 ● Copied to the clipboard. You can now paste it in your .gitignore file.
 ```
+
+By default, templates are copied into the clipboard. It is also possible
+to modify a `.gitignore` file using the `gi_write_gitignore()` function.
+
+``` r
+f <- paste0(tempdir(), "/.gitignore")
+new_lines <- gi_fetch_templates("r")
+gi_write_gitignore(fetched_template = new_lines, gitignore_file = f)
+```
+
+If `gitignore_file` is not specified, `gitignore` will try to find the
+`.gitignore` file of your current project or package.
 
 More examples are provided in the vignette.
 
