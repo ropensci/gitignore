@@ -19,7 +19,7 @@ gi_write_gitignore <-
   function(fetched_template,
              gitignore_file = here::here(".gitignore")) {
 
-    stopifnot(basename(gitignore_file) != ".gitignore")
+    stopifnot(basename(gitignore_file) == ".gitignore")
 
     if (!file.exists(gitignore_file)) { # nocov start
       message(
