@@ -60,7 +60,7 @@ gi_fetch_templates(c("R"), append_gitignore = TRUE)
 It is also possible to specify the `.gitignore` file to be modified by specifying the `gitignore_file` argument.
 
 ```{r, message=TRUE}
-f <- tempfile(pattern = "", fileext = ".gitignore")
+f <- paste0(tempdir(), "/.gitignore")
 
 file.create(f)
 
