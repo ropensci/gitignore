@@ -110,6 +110,7 @@
 <li>
 <code><a href="reference/gi_fetch_templates.html">gi_fetch_templates()</a></code> to fetch one or many gitignore templates.</li>
 </ul>
+<p>Show the first 25 templates returned by <code><a href="reference/gi_available_templates.html">gi_available_templates()</a></code>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(gitignore)</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(<span class="kw"><a href="reference/gi_available_templates.html">gi_available_templates</a></span>(), <span class="dv">25</span>)</a>
@@ -237,8 +238,13 @@
 <a class="sourceLine" id="cb4-63" data-line-number="63">hs_err_pid<span class="op">*</span></a>
 <a class="sourceLine" id="cb4-64" data-line-number="64"></a>
 <a class="sourceLine" id="cb4-65" data-line-number="65"><span class="co"># End of https://www.gitignore.io/api/java,c++</span></a></code></pre></div>
+<p>By default, templates are copied into the clipboard. It is also possible to modify a <code>.gitignore</code> file using the <code><a href="reference/gi_write_gitignore.html">gi_write_gitignore()</a></code> function.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">f &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/tempfile">tempdir</a></span>(), <span class="st">"/.gitignore"</span>)</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">new_lines &lt;-<span class="st"> </span><span class="kw"><a href="reference/gi_fetch_templates.html">gi_fetch_templates</a></span>(<span class="st">"r"</span>)</a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="kw"><a href="reference/gi_write_gitignore.html">gi_write_gitignore</a></span>(<span class="dt">fetched_template =</span> new_lines, <span class="dt">gitignore_file =</span> f)</a></code></pre></div>
+<p>If <code>gitignore_file</code> is not specified, <code>gitignore</code> will try to find the <code>.gitignore</code> file of your current project or package.</p>
 <p>More examples are provided in the vignette.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/browseVignettes">browseVignettes</a></span>(<span class="st">"gitignore"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/browseVignettes">browseVignettes</a></span>(<span class="st">"gitignore"</span>)</a></code></pre></div>
 <p>You can also visit the <a href="http://www.pmassicotte.com/gitignore/">gitignore website</a>.</p>
 </div>
 <div id="code-of-conduct" class="section level2">
