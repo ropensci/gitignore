@@ -6,16 +6,26 @@
 <!-- badges: start -->
 
 [![ropensci\_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)
+
 [![CRAN
 status](https://www.r-pkg.org/badges/version/gitignore)](https://cran.r-project.org/package=gitignore)
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/PMassicotte/gitignore?branch=master&svg=true)](https://ci.appveyor.com/project/PMassicotte/gitignore)
-[![Travis build
-status](https://travis-ci.org/PMassicotte/gitignore.svg?branch=master)](https://travis-ci.org/PMassicotte/gitignore)
+
+[![AppVeyor Build
+Status](https://ci.appveyor.com/api/projects/status/github/ropensci/gitignore?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/gitignore)
+
+<!-- [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/ropensci/gitignore?branch=master&svg=true)](https://ci.appveyor.com/project/ropensci/gitignore) -->
+
+[![Build
+Status](https://travis-ci.org/ropensci/gitignore.svg?branch=master)](https://travis-ci.org/ropensci/gitignore)
+
 [![Codecov test
 coverage](https://codecov.io/gh/PMassicotte/gitignore/branch/master/graph/badge.svg)](https://codecov.io/gh/PMassicotte/gitignore?branch=master)
+
+[![Coverage
+Status](https://coveralls.io/repos/github/ropensci/gitignore/badge.svg)](https://coveralls.io/github/ropensci/gitignore)
+
 <!-- badges: end -->
 
 Based on the definition proposed by
