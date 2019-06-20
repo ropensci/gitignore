@@ -5,8 +5,6 @@
 
 <!-- badges: start -->
 
-[![ropensci\_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)
-
 [![CRAN
 status](https://www.r-pkg.org/badges/version/gitignore)](https://cran.r-project.org/package=gitignore)
 [![License: GPL
@@ -233,3 +231,5 @@ website](http://www.pmassicotte.com/gitignore/).
 Please note that the ‘gitignore’ project is released with a [Contributor
 Code of Conduct](CODE_OF_CONDUCT.md). By [contributing to this
 project](.github/CONTRIBUTING.md), you agree to abide by its terms.
+
+[![ropensci\_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)

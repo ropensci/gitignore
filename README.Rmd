@@ -15,7 +15,6 @@ knitr::opts_chunk$set(
 # gitignore
 
 <!-- badges: start -->
-[![ropensci_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)
 
 [![CRAN status](https://www.r-pkg.org/badges/version/gitignore)](https://cran.r-project.org/package=gitignore)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -97,3 +96,5 @@ You can also visit the [gitignore website](http://www.pmassicotte.com/gitignore/
 ## Code of conduct
 
 Please note that the 'gitignore' project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By [contributing to this project](.github/CONTRIBUTING.md), you agree to abide by its terms.
+
+[![ropensci_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)
