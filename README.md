@@ -16,6 +16,8 @@ Status](https://travis-ci.org/ropensci/gitignore.svg?branch=master)](https://tra
 [![Codecov test
 coverage](https://codecov.io/gh/PMassicotte/gitignore/branch/master/graph/badge.svg)](https://codecov.io/gh/PMassicotte/gitignore?branch=master)
 
+[![DOI](https://zenodo.org/badge/184759416.svg)](https://zenodo.org/badge/latestdoi/184759416)
+
 <!-- badges: end -->
 
 Based on the definition proposed by
