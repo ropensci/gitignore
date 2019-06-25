@@ -14,3 +14,5 @@
 ^docs$
 ^pkgdown$
 ^cran-comments\.md$
+^jobs\.R$
+^tmp\.R$

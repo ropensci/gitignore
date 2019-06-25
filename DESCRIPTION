@@ -6,7 +6,7 @@ Authors@R:
     c(person(given = "Philippe",
              family = "Massicotte",
              role = c("aut", "cre"),
-             email = "pmassicotte@hotmail.com"),
+             email = "maurolepore@gmail.com"),
       person(given = "Amanda",
              family = "Dobbyn",
              role = "rev",
@@ -14,7 +14,7 @@ Authors@R:
       person(given = "Mauro",
              family = "Lepore",
              role = "rev",
-             email = "maurolepore@gmail.com"))
+             email = "fixme@gmail.com"))
 Description: Simple interface to query gitignore.io to fetch
     gitignore templates that can be included in the .gitignore file. More
     than 450 templates are currently available.
