@@ -38,7 +38,7 @@ For any project, it is therefore important to have a `.gitignore` file that is c
 
 ```{r, eval=FALSE}
 install.packages("devtools")
-devtools::install_github("pmassicotte/gitignore")
+devtools::install_github("ropensci/gitignore")
 ```
 
 ## Examples
@@ -84,7 +84,7 @@ More examples are provided in the vignette.
 browseVignettes("gitignore")
 ```
 
-You can also visit the [gitignore website](http://www.pmassicotte.com/gitignore/).
+You can also visit the [gitignore website](https://docs.ropensci.org/gitignore/).
 
 ## Code of conduct
 
