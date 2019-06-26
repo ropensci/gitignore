@@ -33,7 +33,7 @@ For any project, it is therefore important to have a `.gitignore` file that is c
 library(gitignore)
 ```
 
-Get the list of all available templates from [gitignore.io](gitignore.io):
+Get the list of all available templates from [gitignore.io](https://gitignore.io/):
 
 ```{r}
 head(gi_available_templates(), 50)
