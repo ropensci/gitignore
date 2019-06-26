@@ -114,8 +114,11 @@ website](https://docs.ropensci.org/gitignore/).
 ## Code of conduct
 
 Please note that the ‘gitignore’ project is released with a [Contributor
-Code of Conduct](CODE_OF_CONDUCT.md). By [contributing to this
-project](.github/CONTRIBUTING.md), you agree to abide by its
+Code of
+Conduct](https://docs.ropensci.org/gitignore/CODE_OF_CONDUCT.html). By
+[contributing to this
+project](https://docs.ropensci.org/gitignore/CONTRIBUTING.html), you
+agree to abide by its
 terms.
 
 [![ropensci\_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)

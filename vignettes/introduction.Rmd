@@ -22,9 +22,9 @@ Based on the definition proposed by [freecodecamp](https://guide.freecodecamp.or
 
 For any project, it is therefore important to have a `.gitignore` file that is complete and accurate. The package `gitignore` provides a simple R interface to the [gitignore.io](https://gitignore.io/) API. It can be used to fetch gitignore templates that can be included into the `.gitignore` file of you git repository. The `gitignore` R package can be used with R package, R Studio project or with any `.gitignore` file. Note that be default, the `usethis` package populates the `.gitignore` for the R language when you create a R project. However, it is common to use many different programming languages in a project such as `LaTeX`, `python`, `matlab`, `julia` and so one. This is where the `gitignore` package shines as it can be used to programmatically modify the `.gitignore` file of your project.
 
-`gitignore` is a simple R package that provide an interface to query [gitignore.io](gitignore.io) to fetch gitignore templates that can be included in the .gitignore file. More than 450 templates are currently available. There are actually two functions in the package:
+`gitignore` is a simple R package that provide an interface to query [gitignore.io](https://gitignore.io/) to fetch gitignore templates that can be included in the .gitignore file. More than 450 templates are currently available. There are actually two functions in the package:
 
-- `gi_available_templates()`: to get a list of all templates available on [gitignore.io](gitignore.io).
+- `gi_available_templates()`: to get a list of all templates available on [gitignore.io](https://gitignore.io/).
 - `gi_fetch_templates()`: to get one or more template(s). This function can copy the returned template(s) in the clipboard as well as happening the the `.gitignore` file in your project directory.
 
 ## Examples
