@@ -19,12 +19,12 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Philippe Massicotte \email{maurolepore@gmail.com}
+\strong{Maintainer}: Philippe Massicotte \email{pmassicotte@hotmail.com}
 
 Other contributors:
 \itemize{
   \item Amanda Dobbyn \email{amanda.e.dobbyn@gmail.com} [reviewer]
-  \item Mauro Lepore \email{fixme@gmail.com} [reviewer]
+  \item Mauro Lepore \email{maurolepore@gmail.com} [reviewer]
 }
 
 }
