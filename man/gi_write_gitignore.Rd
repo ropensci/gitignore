@@ -13,7 +13,7 @@ gi_write_gitignore(fetched_template,
 \item{gitignore_file}{Path of the .gitignore file to modify.}
 }
 \value{
-TRUE if successed to write/append the .gitignore, FALSE otherwise.
+TRUE if succeeds to write/append the .gitignore, FALSE otherwise.
 }
 \description{
 Use the returned template(s) to append the existing .gitignore file.
