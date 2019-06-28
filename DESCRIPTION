@@ -14,7 +14,8 @@ Authors@R:
       person(given = "Mauro",
              family = "Lepore",
              role = "rev",
-             email = "maurolepore@gmail.com"))
+             email = "maurolepore@gmail.com",
+             comment = c(ORCID = "0000-0002-1986-7988")))
 Description: Simple interface to query gitignore.io to fetch
     gitignore templates that can be included in the .gitignore file. More
     than 450 templates are currently available.
