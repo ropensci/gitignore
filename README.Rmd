@@ -34,7 +34,13 @@ For any project, it is therefore important to have a `.gitignore` file that is c
 
 ## Installation
 
-`gitignore` can be installed from GitHub:
+The CRAN version of `gitignore` can be installed using:
+
+```{r, eval=FALSE}
+install.packages("gitignore")
+```
+
+The dev version of `gitignore` can be installed from GitHub:
 
 ```{r, eval=FALSE}
 install.packages("devtools")
