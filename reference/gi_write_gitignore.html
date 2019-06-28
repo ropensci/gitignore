@@ -147,11 +147,54 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='no'>f</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/tempfile'>tempdir</a></span>(), <span class='st'>"/.gitignore"</span>)
-<span class='no'>new_lines</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='gi_fetch_templates.html'>gi_fetch_templates</a></span>(<span class='st'>"r"</span>)
-<span class='fu'>gi_write_gitignore</span>(<span class='no'>new_lines</span>, <span class='no'>f</span>)
-<span class='co'># }</span></pre>
+    <pre class="examples"><div class='input'><span class='no'>f</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/tempfile'>tempdir</a></span>(), <span class='st'>"/.gitignore"</span>)
+<span class='no'>new_lines</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='gi_fetch_templates.html'>gi_fetch_templates</a></span>(<span class='st'>"r"</span>)</div><div class='output co'>#&gt; 
+#&gt; # Created by https://www.gitignore.io/api/r
+#&gt; # Edit at https://www.gitignore.io/?templates=r
+#&gt; 
+#&gt; ### R ###
+#&gt; # History files
+#&gt; .Rhistory
+#&gt; .Rapp.history
+#&gt; 
+#&gt; # Session Data files
+#&gt; .RData
+#&gt; 
+#&gt; # User-specific files
+#&gt; .Ruserdata
+#&gt; 
+#&gt; # Example code in package build process
+#&gt; *-Ex.R
+#&gt; 
+#&gt; # Output files from R CMD build
+#&gt; /*.tar.gz
+#&gt; 
+#&gt; # Output files from R CMD check
+#&gt; /*.Rcheck/
+#&gt; 
+#&gt; # RStudio files
+#&gt; .Rproj.user/
+#&gt; 
+#&gt; # produced vignettes
+#&gt; vignettes/*.html
+#&gt; vignettes/*.pdf
+#&gt; 
+#&gt; # OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+#&gt; .httr-oauth
+#&gt; 
+#&gt; # knitr and R markdown default cache directories
+#&gt; /*_cache/
+#&gt; /cache/
+#&gt; 
+#&gt; # Temporary files created by R markdown
+#&gt; *.utf8.md
+#&gt; *.knit.md
+#&gt; 
+#&gt; ### R.Bookdown Stack ###
+#&gt; # R package: bookdown caching files
+#&gt; /*_files/
+#&gt; 
+#&gt; # End of https://www.gitignore.io/api/r</div><div class='input'><span class='fu'>gi_write_gitignore</span>(<span class='no'>new_lines</span>, <span class='no'>f</span>)</div><div class='output co'>#&gt; <span class='message'>● The .gitignore file could not be found in the project directory/home/travis/build/ropensci/gitignoreWould you like to create it?</span></div><div class='output co'>#&gt; <span class='error'>Error in utils::menu(c("Yes", "No")): menu() cannot be used non-interactively</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
