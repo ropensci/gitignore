@@ -45,10 +45,10 @@ The function `gi_fetch_templates()` can be used to fetch particular template(s).
 gi_fetch_templates(c("java", "c++"))
 ```
 
-By default, the template(s) are copied into the clipboard, this can be changed by setting `copy_to_clipboard = FALSE`:
+By default, the template(s) are not copied into the clipboard, this can be changed by setting `copy_to_clipboard = TRUE`:
 
-```{r, eval=FALSE}
-gi_fetch_templates(c("java", "c++"), copy_to_clipboard = FALSE)
+```{r, eval=TRUE}
+gi_fetch_templates(c("java", "c++"), copy_to_clipboard = TRUE)
 ```
 
 Additionally, you can tell `gi_fetch_templates()` to append automatically the `.gitignore` file in your project by setting `append_gitignore = TRUE`:

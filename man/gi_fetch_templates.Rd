@@ -4,7 +4,7 @@
 \alias{gi_fetch_templates}
 \title{Fetch gitignore template(s) from gitignore.io}
 \usage{
-gi_fetch_templates(template_name, copy_to_clipboard = TRUE,
+gi_fetch_templates(template_name, copy_to_clipboard = FALSE,
   append_gitignore = FALSE, gitignore_file = here::here(".gitignore"))
 }
 \arguments{
@@ -12,7 +12,7 @@ gi_fetch_templates(template_name, copy_to_clipboard = TRUE,
 \code{\link{gi_available_templates}}.}
 
 \item{copy_to_clipboard}{Logical. Should the returned template(s) be copied
-to the clipboard? Otherwise, it will be printed in the console.}
+to the clipboard? Otherwise, it will be printed in the console. Default is FALSE.}
 
 \item{append_gitignore}{Logical. Should the .gitignore be modified to include
 the returned template(s)?}

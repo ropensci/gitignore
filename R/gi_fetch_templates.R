@@ -3,7 +3,7 @@
 #' @param template_name A character vector with values included in
 #'   \code{\link{gi_available_templates}}.
 #' @param copy_to_clipboard Logical. Should the returned template(s) be copied
-#'   to the clipboard? Otherwise, it will be printed in the console.
+#'   to the clipboard? Otherwise, it will be printed in the console. Default is FALSE.
 #' @param append_gitignore Logical. Should the .gitignore be modified to include
 #'   the returned template(s)?
 #' @param gitignore_file The path of the .gitignore file to be modified. By
@@ -24,7 +24,7 @@
 #' gi_fetch_templates(c("R", "python", "java"))
 gi_fetch_templates <-
   function(template_name,
-             copy_to_clipboard = TRUE,
+             copy_to_clipboard = FALSE,
              append_gitignore = FALSE,
              gitignore_file = here::here(".gitignore")) {
 

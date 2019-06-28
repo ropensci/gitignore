@@ -14,3 +14,9 @@
 
 There are currently no reverse dependencies for this package.
 
+## Re-submission
+
+This is a re-submission fixing two minor elements pointed out by Swetlana Herbrandt.
+
+- Please replace \dontrun{} by \donttest{}
+- Please do not write to the clipboard by default (copy_to_clipboard = FALSE).
