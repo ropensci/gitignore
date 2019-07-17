@@ -14,6 +14,8 @@
 #' f <- paste0(tempdir(), "/.gitignore")
 #' new_lines <- gi_fetch_templates("r")
 #' gi_write_gitignore(new_lines, f)
+#'
+#' unlink(f)
 #' }
 gi_write_gitignore <-
   function(fetched_template,
