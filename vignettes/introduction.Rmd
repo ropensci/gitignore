@@ -47,7 +47,7 @@ gi_fetch_templates(c("java", "c++"))
 
 By default, the template(s) are not copied into the clipboard, this can be changed by setting `copy_to_clipboard = TRUE`:
 
-```{r, eval=TRUE}
+```{r, eval=FALSE}
 gi_fetch_templates(c("java", "c++"), copy_to_clipboard = TRUE)
 ```
 
