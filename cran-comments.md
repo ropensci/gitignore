@@ -21,4 +21,6 @@ The package was archived because it was using the clipboard on Linux. This new r
 - Tests using the clipboard are now skipped on Linux.
 - The code in the vignette do not use the clipboard.
 - The code examples do not use the clipboard.
-- Temporary files created for the examples are now deleted using the `unlink()` function.
+- Temporary files created in the examples are now deleted using the `unlink()` function.
+
+To the best of my knowledge, this release should fix all the clipboard related issues. Please let us know if anything is missing.
