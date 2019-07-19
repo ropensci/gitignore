@@ -14,7 +14,7 @@ Status](https://ci.appveyor.com/api/projects/status/github/ropensci/gitignore?br
 [![Build
 Status](https://travis-ci.org/ropensci/gitignore.svg?branch=master)](https://travis-ci.org/ropensci/gitignore)
 [![Codecov test
-coverage](https://codecov.io/gh/PMassicotte/gitignore/branch/master/graph/badge.svg)](https://codecov.io/gh/PMassicotte/gitignore?branch=master)
+coverage](https://codecov.io/gh/ropensci/gitignore/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/gitignore?branch=master)
 
 [![DOI](https://zenodo.org/badge/184759416.svg)](https://zenodo.org/badge/latestdoi/184759416)
 
@@ -73,13 +73,13 @@ library(gitignore)
 head(gi_available_templates(), 25)
 #>  [1] "1c"                   "1c-bitrix"            "actionscript"        
 #>  [4] "ada"                  "adobe"                "advancedinstaller"   
-#>  [7] "a-frame"              "agda"                 "al"                  
-#> [10] "alteraquartusii"      "altium"               "android"             
-#> [13] "androidstudio"        "angular"              "anjuta"              
-#> [16] "ansible"              "apachecordova"        "apachehadoop"        
-#> [19] "appbuilder"           "appceleratortitanium" "appcode"             
-#> [22] "appcode+all"          "appcode+iml"          "appengine"           
-#> [25] "aptanastudio"
+#>  [7] "adventuregamestudio"  "a-frame"              "agda"                
+#> [10] "al"                   "alteraquartusii"      "altium"              
+#> [13] "android"              "androidstudio"        "angular"             
+#> [16] "anjuta"               "ansible"              "apachecordova"       
+#> [19] "apachehadoop"         "appbuilder"           "appceleratortitanium"
+#> [22] "appcode"              "appcode+all"          "appcode+iml"         
+#> [25] "appengine"
 ```
 
 Templates can be fetched using the `gi_fetch_templates()` function.
@@ -121,7 +121,7 @@ vignettes/*.pdf
 .httr-oauth
 
 # knitr and R markdown default cache directories
-/*_cache/
+*_cache/
 /cache/
 
 # Temporary files created by R markdown
