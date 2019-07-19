@@ -196,71 +196,7 @@
 <a class="sourceLine" id="cb3-64" data-line-number="64"><span class="co">#&gt; </span></a>
 <a class="sourceLine" id="cb3-65" data-line-number="65"><span class="co">#&gt; # End of https://www.gitignore.io/api/java,c++</span></a></code></pre></div>
 <p>By default, the template(s) are not copied into the clipboard, this can be changed by setting <code>copy_to_clipboard = TRUE</code>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/gi_fetch_templates.html">gi_fetch_templates</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"java"</span>, <span class="st">"c++"</span>), <span class="dt">copy_to_clipboard =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#&gt; # Created by https://www.gitignore.io/api/java,c++</span></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">#&gt; # Edit at https://www.gitignore.io/?templates=java,c++</span></a>
-<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt; </span><span class="al">###</span><span class="co"> C++ </span><span class="al">###</span></a>
-<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt; # Prerequisites</span></a>
-<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt; *.d</span></a>
-<a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt; # Compiled Object files</span></a>
-<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co">#&gt; *.slo</span></a>
-<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt; *.lo</span></a>
-<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt; *.o</span></a>
-<a class="sourceLine" id="cb4-14" data-line-number="14"><span class="co">#&gt; *.obj</span></a>
-<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt; # Precompiled Headers</span></a>
-<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt; *.gch</span></a>
-<a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt; *.pch</span></a>
-<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb4-20" data-line-number="20"><span class="co">#&gt; # Compiled Dynamic libraries</span></a>
-<a class="sourceLine" id="cb4-21" data-line-number="21"><span class="co">#&gt; *.so</span></a>
-<a class="sourceLine" id="cb4-22" data-line-number="22"><span class="co">#&gt; *.dylib</span></a>
-<a class="sourceLine" id="cb4-23" data-line-number="23"><span class="co">#&gt; *.dll</span></a>
-<a class="sourceLine" id="cb4-24" data-line-number="24"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb4-25" data-line-number="25"><span class="co">#&gt; # Fortran module files</span></a>
-<a class="sourceLine" id="cb4-26" data-line-number="26"><span class="co">#&gt; *.mod</span></a>
-<a class="sourceLine" id="cb4-27" data-line-number="27"><span class="co">#&gt; *.smod</span></a>
-<a class="sourceLine" id="cb4-28" data-line-number="28"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb4-29" data-line-number="29"><span class="co">#&gt; # Compiled Static libraries</span></a>
-<a class="sourceLine" id="cb4-30" data-line-number="30"><span class="co">#&gt; *.lai</span></a>
-<a class="sourceLine" id="cb4-31" data-line-number="31"><span class="co">#&gt; *.la</span></a>
-<a class="sourceLine" id="cb4-32" data-line-number="32"><span class="co">#&gt; *.a</span></a>
-<a class="sourceLine" id="cb4-33" data-line-number="33"><span class="co">#&gt; *.lib</span></a>
-<a class="sourceLine" id="cb4-34" data-line-number="34"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb4-35" data-line-number="35"><span class="co">#&gt; # Executables</span></a>
-<a class="sourceLine" id="cb4-36" data-line-number="36"><span class="co">#&gt; *.exe</span></a>
-<a class="sourceLine" id="cb4-37" data-line-number="37"><span class="co">#&gt; *.out</span></a>
-<a class="sourceLine" id="cb4-38" data-line-number="38"><span class="co">#&gt; *.app</span></a>
-<a class="sourceLine" id="cb4-39" data-line-number="39"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb4-40" data-line-number="40"><span class="co">#&gt; </span><span class="al">###</span><span class="co"> Java </span><span class="al">###</span></a>
-<a class="sourceLine" id="cb4-41" data-line-number="41"><span class="co">#&gt; # Compiled class file</span></a>
-<a class="sourceLine" id="cb4-42" data-line-number="42"><span class="co">#&gt; *.class</span></a>
-<a class="sourceLine" id="cb4-43" data-line-number="43"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb4-44" data-line-number="44"><span class="co">#&gt; # Log file</span></a>
-<a class="sourceLine" id="cb4-45" data-line-number="45"><span class="co">#&gt; *.log</span></a>
-<a class="sourceLine" id="cb4-46" data-line-number="46"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb4-47" data-line-number="47"><span class="co">#&gt; # BlueJ files</span></a>
-<a class="sourceLine" id="cb4-48" data-line-number="48"><span class="co">#&gt; *.ctxt</span></a>
-<a class="sourceLine" id="cb4-49" data-line-number="49"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb4-50" data-line-number="50"><span class="co">#&gt; # Mobile Tools for Java (J2ME)</span></a>
-<a class="sourceLine" id="cb4-51" data-line-number="51"><span class="co">#&gt; .mtj.tmp/</span></a>
-<a class="sourceLine" id="cb4-52" data-line-number="52"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb4-53" data-line-number="53"><span class="co">#&gt; # Package Files #</span></a>
-<a class="sourceLine" id="cb4-54" data-line-number="54"><span class="co">#&gt; *.jar</span></a>
-<a class="sourceLine" id="cb4-55" data-line-number="55"><span class="co">#&gt; *.war</span></a>
-<a class="sourceLine" id="cb4-56" data-line-number="56"><span class="co">#&gt; *.nar</span></a>
-<a class="sourceLine" id="cb4-57" data-line-number="57"><span class="co">#&gt; *.ear</span></a>
-<a class="sourceLine" id="cb4-58" data-line-number="58"><span class="co">#&gt; *.zip</span></a>
-<a class="sourceLine" id="cb4-59" data-line-number="59"><span class="co">#&gt; *.tar.gz</span></a>
-<a class="sourceLine" id="cb4-60" data-line-number="60"><span class="co">#&gt; *.rar</span></a>
-<a class="sourceLine" id="cb4-61" data-line-number="61"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb4-62" data-line-number="62"><span class="co">#&gt; # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml</span></a>
-<a class="sourceLine" id="cb4-63" data-line-number="63"><span class="co">#&gt; hs_err_pid*</span></a>
-<a class="sourceLine" id="cb4-64" data-line-number="64"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb4-65" data-line-number="65"><span class="co">#&gt; # End of https://www.gitignore.io/api/java,c++</span></a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/gi_fetch_templates.html">gi_fetch_templates</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"java"</span>, <span class="st">"c++"</span>), <span class="dt">copy_to_clipboard =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p>Additionally, you can tell <code><a href="../reference/gi_fetch_templates.html">gi_fetch_templates()</a></code> to append automatically the <code>.gitignore</code> file in your project by setting <code>append_gitignore = TRUE</code>:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="../reference/gi_fetch_templates.html">gi_fetch_templates</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"R"</span>), <span class="dt">append_gitignore =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p>It is also possible to specify the <code>.gitignore</code> file to be modified by specifying the <code>gitignore_file</code> argument.</p>
