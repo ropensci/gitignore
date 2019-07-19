@@ -13,18 +13,18 @@ Simple interface to query gitignore.io to fetch
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/PMassicotte/gitignore}
-  \item Report bugs at \url{https://github.com/PMassicotte/gitignore/issues}
+  \item \url{https://github.com/ropensci/gitignore}
+  \item Report bugs at \url{https://github.com/ropensci/gitignore/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: Philippe Massicotte \email{pmassicotte@hotmail.com}
+\strong{Maintainer}: Philippe Massicotte \email{pmassicotte@hotmail.com} (0000-0002-5919-4116)
 
 Other contributors:
 \itemize{
   \item Amanda Dobbyn \email{amanda.e.dobbyn@gmail.com} [reviewer]
-  \item Mauro Lepore \email{maurolepore@gmail.com} [reviewer]
+  \item Mauro Lepore \email{maurolepore@gmail.com} (0000-0002-1986-7988) [reviewer]
 }
 
 }
