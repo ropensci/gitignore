@@ -9,6 +9,8 @@ test_that("no change in the gitignore file", {
 
   # The second time it should not write anything
   expect_false(gi_write_gitignore(new_lines, f))
+
+  unlink(f)
 })
 
 test_that(".gitignore file can not be found", {
@@ -19,7 +21,7 @@ test_that(".gitignore file can not be found", {
 
   expect_error(gi_write_gitignore(new_lines, f))
 
-
+  unlink(f)
 })
 
 # That would be nice to test, but seems difficult with testthat because of: "menu() cannot be used non-interactively" error
@@ -32,5 +34,5 @@ test_that(".gitignore file can not be found", {
 #
 #   expect_true(gi_write_gitignore(template, f))
 #
-#
+#   unlink(f)
 # })

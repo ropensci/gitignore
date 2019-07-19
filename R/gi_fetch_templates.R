@@ -57,7 +57,7 @@ gi_fetch_templates <-
     )
 
     # Copy or not into the clipboard
-    if (clipr::clipr_available() && copy_to_clipboard) {
+    if (clipr::clipr_available() && copy_to_clipboard) { # nocov start
       clipr::write_clip(rawToChar(r$content))
       message(
         crayon::green(clisymbols::symbol$bullet),
@@ -65,7 +65,7 @@ gi_fetch_templates <-
           " Copied to the clipboard.",
           "You can now paste it in your .gitignore file.\n"
         )
-      )
+      ) # nocov end
     } else {
       cat(rawToChar(r$content))
     }

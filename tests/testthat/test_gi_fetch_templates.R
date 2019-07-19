@@ -37,4 +37,6 @@ test_that("A non existing .gitignore file can be created", {
   file.create(f)
 
   expect_invisible(gi_fetch_templates("R", copy_to_clipboard = FALSE, append_gitignore = TRUE, gitignore_file = f))
+
+  unlink(f)
 })

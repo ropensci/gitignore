@@ -1,18 +1,51 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
+# Based on https://github.com/mdlincoln/clipr/blob/master/.travis.yml
+
 language: R
 cache: packages
+sudo: false
 
 matrix:
   include:
-  - r: devel
-  - r: release
-    before_deploy: Rscript -e 'remotes::install_cran("pkgdown")'
-    deploy:
-      provider: script
-      script: Rscript -e 'pkgdown::deploy_site_github()'
-      skip_cleanup: true
-  - r: oldrel
-  - r: 3.4
-  - r: 3.3
-  - r: 3.2
+    - r: oldrel
+      env: TRAVIS_CLIP=xsel DISPLAY=:99.0 CLIPR_ALLOW=TRUE
+      addons: {apt: {packages: [xsel]}}
+    - r: release
+      env: TRAVIS_CLIP=xsel DISPLAY=:99.0 CLIPR_ALLOW=TRUE
+      addons: {apt: {packages: [xsel]}}
+    - r: devel
+      env: TRAVIS_CLIP=xsel DISPLAY=:99.0 CLIPR_ALLOW=TRUE
+      addons: {apt: {packages: [xsel]}}
+    - r: oldrel
+      env: TRAVIS_CLIP=xclip DISPLAY=:99.0 CLIPR_ALLOW=TRUE
+      addons: {apt: {packages: [xclip]}}
+    - r: release
+      env: TRAVIS_CLIP=xclip DISPLAY=:99.0 CLIPR_ALLOW=TRUE
+      addons: {apt: {packages: [xclip]}}
+    - r: release
+      env: TRAVIS_CLIP=xclip DISPLAY=:99.0
+      addons: {apt: {packages: [xclip]}}
+    - r: devel
+      env: TRAVIS_CLIP=xclip DISPLAY=:99.0 CLIPR_ALLOW=TRUE
+      addons: {apt: {packages: [xclip]}}
+    - r: release
+      env: TRAVIS_CLIP=none DISPLAY=:99.0 CLIPR_ALLOW=TRUE
+    - r: release
+      env: TRAVIS_CLIP=nodisplay CLIPR_ALLOW=TRUE
+      addons: {apt: {packages: [xclip]}}
+    - r: release
+      before_deploy: Rscript -e 'remotes::install_cran("pkgdown")'
+      deploy:
+        provider: script
+        script: Rscript -e 'pkgdown::deploy_site_github()'
+        skip_cleanup: true
+
+before_script:
+  - sh -e /etc/init.d/xvfb start
+  - sleep 3
+  - if [ "$TRAVIS_CLIP" == "xclip" ]; then uptime | xclip -i -sel p -f | xclip -i -sel c; xclip -o -sel clipboard; fi
+
+# covr report
+after_success:
+  - Rscript -e 'covr::codecov()'
