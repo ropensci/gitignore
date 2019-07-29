@@ -1,3 +1,5 @@
+# gitignore (development version)
+
 # gitignore 0.1.4
 
 # gitignore 0.1.3
