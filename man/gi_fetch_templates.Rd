@@ -4,8 +4,12 @@
 \alias{gi_fetch_templates}
 \title{Fetch gitignore template(s) from gitignore.io}
 \usage{
-gi_fetch_templates(template_name, copy_to_clipboard = FALSE,
-  append_gitignore = FALSE, gitignore_file = here::here(".gitignore"))
+gi_fetch_templates(
+  template_name,
+  copy_to_clipboard = FALSE,
+  append_gitignore = FALSE,
+  gitignore_file = here::here(".gitignore")
+)
 }
 \arguments{
 \item{template_name}{A character vector with values included in

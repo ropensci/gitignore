@@ -4,8 +4,7 @@
 \alias{gi_write_gitignore}
 \title{Append or create a .gitignore file}
 \usage{
-gi_write_gitignore(fetched_template,
-  gitignore_file = here::here(".gitignore"))
+gi_write_gitignore(fetched_template, gitignore_file = here::here(".gitignore"))
 }
 \arguments{
 \item{fetched_template}{Template(s) returned by `gi_fetch_templates()`.}
@@ -20,7 +19,7 @@ Use the returned template(s) to append the existing .gitignore file.
 }
 \examples{
 \donttest{
-f <- paste0(tempdir(), "/.gitignore")
+f <- file.path(tempdir(), ".gitignore")
 new_lines <- gi_fetch_templates("r")
 gi_write_gitignore(new_lines, f)
 

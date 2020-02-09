@@ -1,5 +1,5 @@
 test_that("no change in the gitignore file", {
-  f <- paste0(tempdir(), "/.gitignore")
+  f <- file.path(tempdir(), ".gitignore")
   file.create(f)
 
   new_lines <- gi_fetch_templates("r")
@@ -14,7 +14,7 @@ test_that("no change in the gitignore file", {
 })
 
 test_that(".gitignore file can not be found", {
-  f <- paste0(tempdir(), "/.gitignore")
+  f <- file.path(tempdir(), ".gitignore")
   unlink(f)
 
   new_lines <- gi_fetch_templates("r")

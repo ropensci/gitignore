@@ -32,7 +32,7 @@ test_that("Template can be copied in the clipboard", {
 })
 
 test_that("A non existing .gitignore file can be created", {
-  f <- paste0(tempdir(), "/.gitignore")
+  f <- file.path(tempdir(), ".gitignore")
   unlist(f)
   file.create(f)
 
