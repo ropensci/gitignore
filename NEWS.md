@@ -1,6 +1,6 @@
-# gitignore (development version)
+# gitignore 0.1.3.9000
 
-# gitignore 0.1.4
+* Use  `file.path()` instead of `paste0()` to build path. @dpprdan 
 
 # gitignore 0.1.3
 
