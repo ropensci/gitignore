@@ -118,9 +118,9 @@
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(gitignore)</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb3-3" data-line-number="3"><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="kw"><a href="reference/gi_available_templates.html">gi_available_templates</a></span>(), <span class="dv">25</span>)</a>
-<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">#&gt;  [1] "1c"                   "1c-bitrix"            "actionscript"        </span></a>
-<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="co">#&gt;  [4] "ada"                  "adobe"                "advancedinstaller"   </span></a>
-<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">#&gt;  [7] "adventuregamestudio"  "a-frame"              "agda"                </span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">#&gt;  [1] "1c"                   "1c-bitrix"            "a-frame"             </span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="co">#&gt;  [4] "actionscript"         "ada"                  "adobe"               </span></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">#&gt;  [7] "advancedinstaller"    "adventuregamestudio"  "agda"                </span></a>
 <a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#&gt; [10] "al"                   "alteraquartusii"      "altium"              </span></a>
 <a class="sourceLine" id="cb3-8" data-line-number="8"><span class="co">#&gt; [13] "android"              "androidstudio"        "angular"             </span></a>
 <a class="sourceLine" id="cb3-9" data-line-number="9"><span class="co">#&gt; [16] "anjuta"               "ansible"              "apachecordova"       </span></a>
@@ -140,42 +140,43 @@
 <a class="sourceLine" id="cb4-10" data-line-number="10"></a>
 <a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co"># Session Data files</span></a>
 <a class="sourceLine" id="cb4-12" data-line-number="12">.RData</a>
-<a class="sourceLine" id="cb4-13" data-line-number="13"></a>
-<a class="sourceLine" id="cb4-14" data-line-number="14"><span class="co"># User-specific files</span></a>
-<a class="sourceLine" id="cb4-15" data-line-number="15">.Ruserdata</a>
-<a class="sourceLine" id="cb4-16" data-line-number="16"></a>
-<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co"># Example code in package build process</span></a>
-<a class="sourceLine" id="cb4-18" data-line-number="18"><span class="op">*-</span>Ex.R</a>
-<a class="sourceLine" id="cb4-19" data-line-number="19"></a>
-<a class="sourceLine" id="cb4-20" data-line-number="20"><span class="co"># Output files from R CMD build</span></a>
-<a class="sourceLine" id="cb4-21" data-line-number="21"><span class="op">/</span><span class="er">*</span>.tar.gz</a>
-<a class="sourceLine" id="cb4-22" data-line-number="22"></a>
-<a class="sourceLine" id="cb4-23" data-line-number="23"><span class="co"># Output files from R CMD check</span></a>
-<a class="sourceLine" id="cb4-24" data-line-number="24"><span class="op">/</span><span class="er">*</span>.Rcheck<span class="op">/</span></a>
-<a class="sourceLine" id="cb4-25" data-line-number="25"></a>
-<a class="sourceLine" id="cb4-26" data-line-number="26"><span class="co"># RStudio files</span></a>
-<a class="sourceLine" id="cb4-27" data-line-number="27">.Rproj.user<span class="op">/</span></a>
-<a class="sourceLine" id="cb4-28" data-line-number="28"></a>
-<a class="sourceLine" id="cb4-29" data-line-number="29"><span class="co"># produced vignettes</span></a>
-<a class="sourceLine" id="cb4-30" data-line-number="30">vignettes<span class="op">/</span><span class="er">*</span>.html</a>
-<a class="sourceLine" id="cb4-31" data-line-number="31">vignettes<span class="op">/</span><span class="er">*</span>.pdf</a>
-<a class="sourceLine" id="cb4-32" data-line-number="32"></a>
-<a class="sourceLine" id="cb4-33" data-line-number="33"><span class="co"># OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3</span></a>
-<a class="sourceLine" id="cb4-34" data-line-number="34">.httr<span class="op">-</span>oauth</a>
-<a class="sourceLine" id="cb4-35" data-line-number="35"></a>
-<a class="sourceLine" id="cb4-36" data-line-number="36"><span class="co"># knitr and R markdown default cache directories</span></a>
-<a class="sourceLine" id="cb4-37" data-line-number="37"><span class="op">*</span>_cache<span class="op">/</span></a>
-<a class="sourceLine" id="cb4-38" data-line-number="38"><span class="er">/</span>cache<span class="op">/</span></a>
-<a class="sourceLine" id="cb4-39" data-line-number="39"></a>
-<a class="sourceLine" id="cb4-40" data-line-number="40"><span class="co"># Temporary files created by R markdown</span></a>
-<a class="sourceLine" id="cb4-41" data-line-number="41"><span class="er">*</span>.utf8.md</a>
-<a class="sourceLine" id="cb4-42" data-line-number="42"><span class="op">*</span>.knit.md</a>
-<a class="sourceLine" id="cb4-43" data-line-number="43"></a>
-<a class="sourceLine" id="cb4-44" data-line-number="44">### R.Bookdown Stack <span class="al">###</span></a>
-<a class="sourceLine" id="cb4-45" data-line-number="45"><span class="co"># R package: bookdown caching files</span></a>
-<a class="sourceLine" id="cb4-46" data-line-number="46"><span class="op">/</span><span class="er">*</span>_files<span class="op">/</span></a>
-<a class="sourceLine" id="cb4-47" data-line-number="47"></a>
-<a class="sourceLine" id="cb4-48" data-line-number="48"><span class="co"># End of https://www.gitignore.io/api/r</span></a></code></pre></div>
+<a class="sourceLine" id="cb4-13" data-line-number="13">.RDataTmp</a>
+<a class="sourceLine" id="cb4-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co"># User-specific files</span></a>
+<a class="sourceLine" id="cb4-16" data-line-number="16">.Ruserdata</a>
+<a class="sourceLine" id="cb4-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co"># Example code in package build process</span></a>
+<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="op">*-</span>Ex.R</a>
+<a class="sourceLine" id="cb4-20" data-line-number="20"></a>
+<a class="sourceLine" id="cb4-21" data-line-number="21"><span class="co"># Output files from R CMD build</span></a>
+<a class="sourceLine" id="cb4-22" data-line-number="22"><span class="op">/</span><span class="er">*</span>.tar.gz</a>
+<a class="sourceLine" id="cb4-23" data-line-number="23"></a>
+<a class="sourceLine" id="cb4-24" data-line-number="24"><span class="co"># Output files from R CMD check</span></a>
+<a class="sourceLine" id="cb4-25" data-line-number="25"><span class="op">/</span><span class="er">*</span>.Rcheck<span class="op">/</span></a>
+<a class="sourceLine" id="cb4-26" data-line-number="26"></a>
+<a class="sourceLine" id="cb4-27" data-line-number="27"><span class="co"># RStudio files</span></a>
+<a class="sourceLine" id="cb4-28" data-line-number="28">.Rproj.user<span class="op">/</span></a>
+<a class="sourceLine" id="cb4-29" data-line-number="29"></a>
+<a class="sourceLine" id="cb4-30" data-line-number="30"><span class="co"># produced vignettes</span></a>
+<a class="sourceLine" id="cb4-31" data-line-number="31">vignettes<span class="op">/</span><span class="er">*</span>.html</a>
+<a class="sourceLine" id="cb4-32" data-line-number="32">vignettes<span class="op">/</span><span class="er">*</span>.pdf</a>
+<a class="sourceLine" id="cb4-33" data-line-number="33"></a>
+<a class="sourceLine" id="cb4-34" data-line-number="34"><span class="co"># OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3</span></a>
+<a class="sourceLine" id="cb4-35" data-line-number="35">.httr<span class="op">-</span>oauth</a>
+<a class="sourceLine" id="cb4-36" data-line-number="36"></a>
+<a class="sourceLine" id="cb4-37" data-line-number="37"><span class="co"># knitr and R markdown default cache directories</span></a>
+<a class="sourceLine" id="cb4-38" data-line-number="38"><span class="op">*</span>_cache<span class="op">/</span></a>
+<a class="sourceLine" id="cb4-39" data-line-number="39"><span class="er">/</span>cache<span class="op">/</span></a>
+<a class="sourceLine" id="cb4-40" data-line-number="40"></a>
+<a class="sourceLine" id="cb4-41" data-line-number="41"><span class="co"># Temporary files created by R markdown</span></a>
+<a class="sourceLine" id="cb4-42" data-line-number="42"><span class="er">*</span>.utf8.md</a>
+<a class="sourceLine" id="cb4-43" data-line-number="43"><span class="op">*</span>.knit.md</a>
+<a class="sourceLine" id="cb4-44" data-line-number="44"></a>
+<a class="sourceLine" id="cb4-45" data-line-number="45">### R.Bookdown Stack <span class="al">###</span></a>
+<a class="sourceLine" id="cb4-46" data-line-number="46"><span class="co"># R package: bookdown caching files</span></a>
+<a class="sourceLine" id="cb4-47" data-line-number="47"><span class="op">/</span><span class="er">*</span>_files<span class="op">/</span></a>
+<a class="sourceLine" id="cb4-48" data-line-number="48"></a>
+<a class="sourceLine" id="cb4-49" data-line-number="49"><span class="co"># End of https://www.gitignore.io/api/r</span></a></code></pre></div>
 <p>Multiple templates can be fetched by specifying multiple values:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="reference/gi_fetch_templates.html">gi_fetch_templates</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"java"</span>, <span class="st">"c++"</span>))</a>
 <a class="sourceLine" id="cb5-2" data-line-number="2"></a>
@@ -243,7 +244,7 @@
 <a class="sourceLine" id="cb5-64" data-line-number="64"></a>
 <a class="sourceLine" id="cb5-65" data-line-number="65"><span class="co"># End of https://www.gitignore.io/api/java,c++</span></a></code></pre></div>
 <p>By default, templates are copied into the clipboard. It is also possible to modify a <code>.gitignore</code> file using the <code><a href="reference/gi_write_gitignore.html">gi_write_gitignore()</a></code> function.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">f &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span>(), <span class="st">"/.gitignore"</span>)</a>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">f &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/file.path.html">file.path</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span>(), <span class="st">".gitignore"</span>)</a>
 <a class="sourceLine" id="cb6-2" data-line-number="2">new_lines &lt;-<span class="st"> </span><span class="kw"><a href="reference/gi_fetch_templates.html">gi_fetch_templates</a></span>(<span class="st">"r"</span>)</a>
 <a class="sourceLine" id="cb6-3" data-line-number="3"><span class="kw"><a href="reference/gi_write_gitignore.html">gi_write_gitignore</a></span>(<span class="dt">fetched_template =</span> new_lines, <span class="dt">gitignore_file =</span> f)</a></code></pre></div>
 <p>If <code>gitignore_file</code> is not specified, <code>gitignore</code> will try to find the <code>.gitignore</code> file of your current project or package.</p>

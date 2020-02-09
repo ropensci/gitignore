@@ -129,8 +129,7 @@
     <p>Use the returned template(s) to append the existing .gitignore file.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>gi_write_gitignore</span>(<span class='no'>fetched_template</span>,
-  <span class='kw'>gitignore_file</span> <span class='kw'>=</span> <span class='kw pkg'>here</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/here/man/here.html'>here</a></span>(<span class='st'>".gitignore"</span>))</pre>
+    <pre class="usage"><span class='fu'>gi_write_gitignore</span>(<span class='no'>fetched_template</span>, <span class='kw'>gitignore_file</span> <span class='kw'>=</span> <span class='kw pkg'>here</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/here/man/here.html'>here</a></span>(<span class='st'>".gitignore"</span>))</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -151,7 +150,7 @@
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='no'>f</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), <span class='st'>"/.gitignore"</span>)
+<span class='no'>f</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), <span class='st'>".gitignore"</span>)
 <span class='no'>new_lines</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='gi_fetch_templates.html'>gi_fetch_templates</a></span>(<span class='st'>"r"</span>)</div><div class='output co'>#&gt; 
 #&gt; # Created by https://www.gitignore.io/api/r
 #&gt; # Edit at https://www.gitignore.io/?templates=r
@@ -199,7 +198,7 @@
 #&gt; # R package: bookdown caching files
 #&gt; /*_files/
 #&gt; 
-#&gt; # End of https://www.gitignore.io/api/r</div><div class='input'><span class='fu'>gi_write_gitignore</span>(<span class='no'>new_lines</span>, <span class='no'>f</span>)</div><div class='output co'>#&gt; <span class='message'>● The .gitignore file could not be found in the project directory/tmp/RtmpOZUXSR/file4ca17a707cdcWould you like to create it?</span></div><div class='output co'>#&gt; <span class='error'>Error in utils::menu(c("Yes", "No")): menu() cannot be used non-interactively</span></div><div class='input'>
+#&gt; # End of https://www.gitignore.io/api/r</div><div class='input'><span class='fu'>gi_write_gitignore</span>(<span class='no'>new_lines</span>, <span class='no'>f</span>)</div><div class='output co'>#&gt; <span class='message'>● The .gitignore file could not be found in the project directory/tmp/Rtmp41FfyK/file4c222a881ae6Would you like to create it?</span></div><div class='output co'>#&gt; <span class='error'>Error in utils::menu(c("Yes", "No")): menu() cannot be used non-interactively</span></div><div class='input'>
 <span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span>(<span class='no'>f</span>)
 <span class='co'># }</span></div></pre>
   </div>
