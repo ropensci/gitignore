@@ -77,7 +77,7 @@ gi_fetch_templates(c("java", "c++"))
 By default, templates are copied into the clipboard. It is also possible to modify a `.gitignore` file using the `gi_write_gitignore()` function.
 
 ```{r, eval=FALSE}
-f <- paste0(tempdir(), "/.gitignore")
+f <- file.path(tempdir(), ".gitignore")
 new_lines <- gi_fetch_templates("r")
 gi_write_gitignore(fetched_template = new_lines, gitignore_file = f)
 ```

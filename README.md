@@ -71,9 +71,9 @@ Show the first 25 templates returned by `gi_available_templates()`.
 library(gitignore)
 
 head(gi_available_templates(), 25)
-#>  [1] "1c"                   "1c-bitrix"            "actionscript"        
-#>  [4] "ada"                  "adobe"                "advancedinstaller"   
-#>  [7] "adventuregamestudio"  "a-frame"              "agda"                
+#>  [1] "1c"                   "1c-bitrix"            "a-frame"             
+#>  [4] "actionscript"         "ada"                  "adobe"               
+#>  [7] "advancedinstaller"    "adventuregamestudio"  "agda"                
 #> [10] "al"                   "alteraquartusii"      "altium"              
 #> [13] "android"              "androidstudio"        "angular"             
 #> [16] "anjuta"               "ansible"              "apachecordova"       
@@ -97,6 +97,7 @@ gi_fetch_templates("R")
 
 # Session Data files
 .RData
+.RDataTmp
 
 # User-specific files
 .Ruserdata
@@ -209,7 +210,7 @@ By default, templates are copied into the clipboard. It is also possible
 to modify a `.gitignore` file using the `gi_write_gitignore()` function.
 
 ``` r
-f <- paste0(tempdir(), "/.gitignore")
+f <- file.path(tempdir(), ".gitignore")
 new_lines <- gi_fetch_templates("r")
 gi_write_gitignore(fetched_template = new_lines, gitignore_file = f)
 ```
@@ -233,7 +234,6 @@ Code of
 Conduct](https://docs.ropensci.org/gitignore/CODE_OF_CONDUCT.html). By
 [contributing to this
 project](https://docs.ropensci.org/gitignore/CONTRIBUTING.html), you
-agree to abide by its
-terms.
+agree to abide by its terms.
 
 [![ropensci\_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)
