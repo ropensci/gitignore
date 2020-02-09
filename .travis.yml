@@ -6,6 +6,9 @@ language: R
 cache: packages
 sudo: false
 
+services:
+  - xvfb
+  
 matrix:
   include:
     - r: oldrel
