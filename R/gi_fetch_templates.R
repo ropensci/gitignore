@@ -53,7 +53,7 @@ gi_fetch_templates <-
     template_name <- paste(template_name, collapse = ",")
 
     r <- curl::curl_fetch_memory(
-      glue::glue("https://www.gitignore.io/api/{template_name}")
+      glue::glue("{backend_url()}/api/{template_name}")
     )
 
     # Copy or not into the clipboard
