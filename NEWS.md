@@ -1,6 +1,6 @@
 # gitignore 0.1.4
 
-* Use https://www.toptal.com/developers/gitignore instead of https://www.gitignore.io/ as backend (#13).
+* Change backend from https://www.gitignore.io/ to  https://www.toptal.com/developers/gitignore as the former now redirects to the later (#13 @pat-s).
 
 * Use  `file.path()` instead of `paste0()` to build path. @dpprdan 
 

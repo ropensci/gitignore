@@ -12,7 +12,7 @@
 gi_available_templates <-
   function() {
 
-    url = "https://www.toptal.com/developers/gitignore/api/list?format=json"
+    url <- glue::glue("{backend_url()}/api/list?format=json")
     res <- curl::curl_fetch_memory(url)
 
     r <- jsonlite::fromJSON(rawToChar(res$content))
