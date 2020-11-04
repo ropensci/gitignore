@@ -18,7 +18,7 @@ TRUE if succeeds to write/append the .gitignore, FALSE otherwise.
 Use the returned template(s) to append the existing .gitignore file.
 }
 \examples{
-\donttest{
+\dontrun{
 f <- file.path(tempdir(), ".gitignore")
 new_lines <- gi_fetch_templates("r")
 gi_write_gitignore(new_lines, f)

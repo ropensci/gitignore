@@ -15,13 +15,14 @@ Status](https://ci.appveyor.com/api/projects/status/github/ropensci/gitignore?br
 Status](https://travis-ci.org/ropensci/gitignore.svg?branch=master)](https://travis-ci.org/ropensci/gitignore)
 [![Codecov test
 coverage](https://codecov.io/gh/ropensci/gitignore/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/gitignore?branch=master)
-
 [![DOI](https://zenodo.org/badge/184759416.svg)](https://zenodo.org/badge/latestdoi/184759416)
+[![rOpenSci
+peer-review](https://badges.ropensci.org/303_status.svg)](https://github.com/ropensci/software-review/issues/303)
 
 <!-- badges: end -->
 
 Based on the definition proposed by
-[freecodecamp](https://guide.freecodecamp.org/git/gitignore/):
+[freecodecamp](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/):
 
 > The .gitignore file is a text file that tells Git which files or
 > folders to ignore in a project. A local .gitignore file is usually
@@ -31,8 +32,9 @@ Based on the definition proposed by
 
 For any project, it is therefore important to have a `.gitignore` file
 that is complete and accurate. The package `gitignore` provides a simple
-R interface to the [gitignore.io](https://gitignore.io/) API. It can be
-used to fetch gitignore templates that can be included into the
+R interface to the
+[gitignore.io](https://www.toptal.com/developers/gitignore) API. It can
+be used to fetch gitignore templates that can be included into the
 `.gitignore` file of you git repository. The `gitignore` R package can
 be used with R package, R Studio project or with any `.gitignore` file.
 Note that by default, the `usethis` package populates the `.gitignore`
@@ -61,9 +63,9 @@ devtools::install_github("ropensci/gitignore")
 
 There are currently two useful functions in the package:
 
-  - `gi_available_templates()` to fetch all supported gitignore
+-   `gi_available_templates()` to fetch all supported gitignore
     templates.
-  - `gi_fetch_templates()` to fetch one or many gitignore templates.
+-   `gi_fetch_templates()` to fetch one or many gitignore templates.
 
 Show the first 25 templates returned by `gi_available_templates()`.
 
@@ -75,11 +77,11 @@ head(gi_available_templates(), 25)
 #>  [4] "actionscript"         "ada"                  "adobe"               
 #>  [7] "advancedinstaller"    "adventuregamestudio"  "agda"                
 #> [10] "al"                   "alteraquartusii"      "altium"              
-#> [13] "android"              "androidstudio"        "angular"             
-#> [16] "anjuta"               "ansible"              "apachecordova"       
-#> [19] "apachehadoop"         "appbuilder"           "appceleratortitanium"
-#> [22] "appcode"              "appcode+all"          "appcode+iml"         
-#> [25] "appengine"
+#> [13] "amplify"              "android"              "androidstudio"       
+#> [16] "angular"              "anjuta"               "ansible"             
+#> [19] "apachecordova"        "apachehadoop"         "appbuilder"          
+#> [22] "appceleratortitanium" "appcode"              "appcode+all"         
+#> [25] "appcode+iml"
 ```
 
 Templates can be fetched using the `gi_fetch_templates()` function.
@@ -87,8 +89,8 @@ Templates can be fetched using the `gi_fetch_templates()` function.
 ``` r
 gi_fetch_templates("R")
 
-# Created by https://www.gitignore.io/api/r
-# Edit at https://www.gitignore.io/?templates=r
+# Created by https://www.toptal.com/developers/gitignore/api/r
+# Edit at https://www.toptal.com/developers/gitignore?templates=r
 
 ### R ###
 # History files
@@ -97,7 +99,6 @@ gi_fetch_templates("R")
 
 # Session Data files
 .RData
-.RDataTmp
 
 # User-specific files
 .Ruserdata
@@ -129,11 +130,14 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 
+# R Environment Variables
+.Renviron
+
 ### R.Bookdown Stack ###
 # R package: bookdown caching files
 /*_files/
 
-# End of https://www.gitignore.io/api/r
+# End of https://www.toptal.com/developers/gitignore/api/r
 ```
 
 Multiple templates can be fetched by specifying multiple values:
@@ -141,8 +145,8 @@ Multiple templates can be fetched by specifying multiple values:
 ``` r
 gi_fetch_templates(c("java", "c++"))
 
-# Created by https://www.gitignore.io/api/java,c++
-# Edit at https://www.gitignore.io/?templates=java,c++
+# Created by https://www.toptal.com/developers/gitignore/api/java,c++
+# Edit at https://www.toptal.com/developers/gitignore?templates=java,c++
 
 ### C++ ###
 # Prerequisites
@@ -203,7 +207,7 @@ gi_fetch_templates(c("java", "c++"))
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-# End of https://www.gitignore.io/api/java,c++
+# End of https://www.toptal.com/developers/gitignore/api/java,c++
 ```
 
 By default, templates are copied into the clipboard. It is also possible
