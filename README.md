@@ -9,8 +9,6 @@
 status](https://www.r-pkg.org/badges/version/gitignore)](https://cran.r-project.org/package=gitignore)
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![AppVeyor Build
-Status](https://ci.appveyor.com/api/projects/status/github/ropensci/gitignore?branch=master&svg=true)](https://ci.appveyor.com/project/pmassicotte/gitignore)
 [![Codecov test
 coverage](https://codecov.io/gh/ropensci/gitignore/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/gitignore?branch=master)
 [![DOI](https://zenodo.org/badge/184759416.svg)](https://zenodo.org/badge/latestdoi/184759416)
