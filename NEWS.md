@@ -1,5 +1,7 @@
 # gitignore (development version)
 
+* Using Github Actions for continuous integration.
+
 # gitignore 0.1.4
 
 * Change backend from https://www.gitignore.io/ to  https://www.toptal.com/developers/gitignore as the former now redirects to the later (#13 @pat-s).
