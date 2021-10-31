@@ -56,6 +56,10 @@ gi_fetch_templates <-
       glue::glue("{backend_url()}/api/{template_name}")
     )
 
+    if (r$status_code != 200) {
+      stop(paste("http request failed with status code:"), r$status_code)
+    }
+
     # Copy or not into the clipboard
     if (clipr::clipr_available() && copy_to_clipboard) { # nocov start
       clipr::write_clip(rawToChar(r$content))

@@ -10,13 +10,13 @@ status](https://www.r-pkg.org/badges/version/gitignore)](https://cran.r-project.
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Codecov test
-coverage](https://codecov.io/gh/ropensci/gitignore/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/gitignore?branch=master)
+coverage](https://codecov.io/gh/ropensci/gitignore/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ropensci/gitignore?branch=main)
 [![DOI](https://zenodo.org/badge/184759416.svg)](https://zenodo.org/badge/latestdoi/184759416)
 [![rOpenSci
 peer-review](https://badges.ropensci.org/303_status.svg)](https://github.com/ropensci/software-review/issues/303)
 
 [![R build
-status](https://github.com/PMassicotte/gitignore/workflows/R-CMD-check/badge.svg)](https://github.com/PMassicotte/gitignore/actions)
+status](https://github.com/PMassicotte/gitignore/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/gitignore/actions))
 <!-- badges: end -->
 
 Based on the definition proposed by
@@ -77,9 +77,9 @@ head(gi_available_templates(), 25)
 #> [10] "al"                   "alteraquartusii"      "altium"              
 #> [13] "amplify"              "android"              "androidstudio"       
 #> [16] "angular"              "anjuta"               "ansible"             
-#> [19] "apachecordova"        "apachehadoop"         "appbuilder"          
-#> [22] "appceleratortitanium" "appcode"              "appcode+all"         
-#> [25] "appcode+iml"
+#> [19] "ansibletower"         "apachecordova"        "apachehadoop"        
+#> [22] "appbuilder"           "appceleratortitanium" "appcode"             
+#> [25] "appcode+all"
 ```
 
 Templates can be fetched using the `gi_fetch_templates()` function.
@@ -130,6 +130,12 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# pkgdown site
+docs/
+
+# translation temp files
+po/*~
 
 ### R.Bookdown Stack ###
 # R package: bookdown caching files
@@ -238,4 +244,4 @@ Conduct](https://docs.ropensci.org/gitignore/CODE_OF_CONDUCT.html). By
 project](https://docs.ropensci.org/gitignore/CONTRIBUTING.html), you
 agree to abide by its terms.
 
-[![ropensci\_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)
+[![ropensci_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)
