@@ -1,3 +1,5 @@
+# gitignore (development version)
+
 # gitignore 0.1.5
 
 * Using Github Actions for continuous integration.
