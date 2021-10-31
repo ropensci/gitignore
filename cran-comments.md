@@ -1,13 +1,13 @@
+This patch fixes CRAN check results. Tests are not performed when internet connection was not available.
+
 ## Test environments
 
-* Ubuntu (on Travis-ci), oldrel, release, devel
+* Ubuntu oldrel, release, devel
 * win-builder (devel and release)
 
 ## R CMD check results
 
 0 errors | 0 warnings | 1 note
-
-* This is a new release.
 
 ## Downstream dependencies
 

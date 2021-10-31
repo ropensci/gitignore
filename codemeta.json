@@ -10,14 +10,13 @@
   "codeRepository": "https://github.com/ropensci/gitignore",
   "issueTracker": "https://github.com/ropensci/gitignore/issues",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "0.1.3",
+  "version": "0.1.4.9000",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.6.1",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.1 (2019-07-05)",
+  "runtimePlatform": "R version 4.1.1 (2021-08-10)",
   "author": [
     {
       "@type": "Person",
@@ -212,10 +211,20 @@
       "sameAs": "https://CRAN.R-project.org/package=xfun"
     }
   ],
-  "readme": "https://github.com/ropensci/gitignore/blob/master/README.md",
-  "contIntegration": [
-    "https://ci.appveyor.com/project/PMassicotte/gitignore",
-    "https://travis-ci.org/PMassicotte/gitignore"
-  ],
-  "releaseNotes": "https://github.com/PMassicotte/gitignore/blob/master/NEWS.md"
+  "readme": "https://github.com/ropensci/gitignore/blob/main/README.md",
+  "contIntegration": ["https://app.codecov.io/gh/ropensci/gitignore?branch=main", "https://github.com/ropensci/gitignore/actions"],
+  "releaseNotes": "https://github.com/ropensci/gitignore/blob/master/NEWS.md",
+  "relatedLink": ["https://docs.ropensci.org/gitignore/", "https://CRAN.R-project.org/package=gitignore"],
+  "provider": {
+    "@id": "https://cran.r-project.org",
+    "@type": "Organization",
+    "name": "Comprehensive R Archive Network (CRAN)",
+    "url": "https://cran.r-project.org"
+  },
+  "fileSize": "72.61KB",
+  "review": {
+    "@type": "Review",
+    "url": "https://github.com/ropensci/software-review/issues/303",
+    "provider": "https://ropensci.org"
+  }
 }

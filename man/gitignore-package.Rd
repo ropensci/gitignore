@@ -6,9 +6,7 @@
 \alias{gitignore-package}
 \title{gitignore: Create Useful .gitignore Files for your Project}
 \description{
-Simple interface to query gitignore.io to fetch
-    gitignore templates that can be included in the .gitignore file. More
-    than 450 templates are currently available.
+Simple interface to query gitignore.io to fetch gitignore templates that can be included in the .gitignore file. More than 450 templates are currently available.
 }
 \seealso{
 Useful links:

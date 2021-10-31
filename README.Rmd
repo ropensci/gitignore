@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 
 [![CRAN status](https://www.r-pkg.org/badges/version/gitignore)](https://cran.r-project.org/package=gitignore)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Codecov test coverage](https://codecov.io/gh/ropensci/gitignore/branch/master/graph/badge.svg)](https://app.codecov.io/gh/ropensci/gitignore?branch=master)
+[![Codecov test coverage](https://codecov.io/gh/ropensci/gitignore/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ropensci/gitignore?branch=main)
 [![DOI](https://zenodo.org/badge/184759416.svg)](https://zenodo.org/badge/latestdoi/184759416)
 [![rOpenSci peer-review](https://badges.ropensci.org/303_status.svg)](https://github.com/ropensci/software-review/issues/303)
 
