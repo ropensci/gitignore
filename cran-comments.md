@@ -1,4 +1,4 @@
-This patch fixes CRAN check results. Tests are not performed when internet connection was not available.
+This patch fixes CRAN check results. Tests are now not performed when internet connection is not available.
 
 ## Test environments
 
