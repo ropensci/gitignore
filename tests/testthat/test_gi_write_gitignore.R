@@ -1,4 +1,5 @@
 test_that("no change in the gitignore file", {
+  skip_on_cran()
   skip_if_offline()
 
   f <- file.path(tempdir(), ".gitignore")
@@ -16,6 +17,7 @@ test_that("no change in the gitignore file", {
 })
 
 test_that(".gitignore file can not be found", {
+  skip_on_cran()
   skip_if_offline()
 
   f <- file.path(tempdir(), ".gitignore")
