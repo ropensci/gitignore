@@ -14,9 +14,9 @@ coverage](https://codecov.io/gh/ropensci/gitignore/branch/main/graph/badge.svg)]
 [![DOI](https://zenodo.org/badge/184759416.svg)](https://zenodo.org/badge/latestdoi/184759416)
 [![rOpenSci
 peer-review](https://badges.ropensci.org/303_status.svg)](https://github.com/ropensci/software-review/issues/303)
-
 [![R build
 status](https://github.com/PMassicotte/gitignore/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/gitignore/actions))
+[![R-CMD-check](https://github.com/PMassicotte/gitignore/workflows/R-CMD-check/badge.svg)](https://github.com/PMassicotte/gitignore/actions)
 <!-- badges: end -->
 
 Based on the definition proposed by
