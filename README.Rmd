@@ -18,11 +18,11 @@ knitr::opts_chunk$set(
 
 [![CRAN status](https://www.r-pkg.org/badges/version/gitignore)](https://cran.r-project.org/package=gitignore)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Codecov test coverage](https://codecov.io/gh/ropensci/gitignore/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/gitignore?branch=master)
+[![Codecov test coverage](https://codecov.io/gh/ropensci/gitignore/branch/master/graph/badge.svg)](https://app.codecov.io/gh/ropensci/gitignore?branch=master)
 [![DOI](https://zenodo.org/badge/184759416.svg)](https://zenodo.org/badge/latestdoi/184759416)
 [![rOpenSci peer-review](https://badges.ropensci.org/303_status.svg)](https://github.com/ropensci/software-review/issues/303)
 
-[![R build status](https://github.com/PMassicotte/gitignore/workflows/R-CMD-check/badge.svg)](https://github.com/PMassicotte/gitignore/actions)
+[![R build status](https://github.com/PMassicotte/gitignore/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/gitignore/actions))
 <!-- badges: end -->
 
 Based on the definition proposed by [freecodecamp](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/):
