@@ -11,7 +11,6 @@
 #' gi_available_templates()
 gi_available_templates <-
   function() {
-
     url <- glue::glue("{backend_url()}/api/list?format=json")
     res <- curl::curl_fetch_memory(url)
 

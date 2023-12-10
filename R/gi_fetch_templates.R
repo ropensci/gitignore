@@ -24,10 +24,9 @@
 #' gi_fetch_templates(c("R", "python", "java"))
 gi_fetch_templates <-
   function(template_name,
-             copy_to_clipboard = FALSE,
-             append_gitignore = FALSE,
-             gitignore_file = here::here(".gitignore")) {
-
+           copy_to_clipboard = FALSE,
+           append_gitignore = FALSE,
+           gitignore_file = here::here(".gitignore")) {
     # Check if vector of char
     stopifnot(
       is.character(template_name),

@@ -12,6 +12,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+
 ```
 
 ## Basic idea
@@ -41,7 +42,7 @@ head(gi_available_templates(), 50)
 
 The function `gi_fetch_templates()` can be used to fetch particular template(s). For example, one could want to get the `java` and `c++` templates as follow:
 
-```{r}
+```{r, eval=is_url_available()}
 gi_fetch_templates(c("java", "c++"))
 ```
 
@@ -59,14 +60,13 @@ gi_fetch_templates(c("R"), append_gitignore = TRUE)
 
 It is also possible to specify the `.gitignore` file to be modified by specifying the `gitignore_file` argument.
 
-```{r, message=TRUE}
+```{r, message=TRUE, eval=is_url_available()}
 f <- file.path(tempdir(), ".gitignore")
 
 file.create(f)
 
 gi_fetch_templates("R", gitignore_file = f, append_gitignore = TRUE)
-  
+
 readLines(f)
-  
 ```
 

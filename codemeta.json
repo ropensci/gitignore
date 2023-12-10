@@ -1,22 +1,26 @@
 {
-  "@context": [
-    "https://doi.org/10.5063/schema/codemeta-2.0",
-    "http://schema.org"
-  ],
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "gitignore",
-  "description": "Simple interface to query gitignore.io to fetch\n    gitignore templates that can be included in the .gitignore file. More\n    than 450 templates are currently available.",
+  "description": "Simple interface to query gitignore.io to fetch gitignore templates that can be included in the .gitignore file. More than 450 templates are currently available.",
   "name": "gitignore: Create Useful .gitignore Files for your Project",
+  "relatedLink": ["https://docs.ropensci.org/gitignore/", "https://CRAN.R-project.org/package=gitignore"],
   "codeRepository": "https://github.com/ropensci/gitignore",
   "issueTracker": "https://github.com/ropensci/gitignore/issues",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "0.1.4.9000",
+  "version": "0.1.5.9000",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.1.1 (2021-08-10)",
+  "runtimePlatform": "R version 4.3.2 (2023-10-31)",
+  "provider": {
+    "@id": "https://cran.r-project.org",
+    "@type": "Organization",
+    "name": "Comprehensive R Archive Network (CRAN)",
+    "url": "https://cran.r-project.org"
+  },
   "author": [
     {
       "@type": "Person",
@@ -26,9 +30,6 @@
       "@id": "https://orcid.org/0000-0002-5919-4116"
     }
   ],
-  "contributor": {},
-  "copyrightHolder": {},
-  "funder": {},
   "maintainer": [
     {
       "@type": "Person",
@@ -101,8 +102,8 @@
       "sameAs": "https://CRAN.R-project.org/package=testthat"
     }
   ],
-  "softwareRequirements": [
-    {
+  "softwareRequirements": {
+    "1": {
       "@type": "SoftwareApplication",
       "identifier": "clipr",
       "name": "clipr",
@@ -114,7 +115,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=clipr"
     },
-    {
+    "2": {
       "@type": "SoftwareApplication",
       "identifier": "clisymbols",
       "name": "clisymbols",
@@ -126,7 +127,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=clisymbols"
     },
-    {
+    "3": {
       "@type": "SoftwareApplication",
       "identifier": "crayon",
       "name": "crayon",
@@ -138,7 +139,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=crayon"
     },
-    {
+    "4": {
       "@type": "SoftwareApplication",
       "identifier": "curl",
       "name": "curl",
@@ -150,7 +151,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=curl"
     },
-    {
+    "5": {
       "@type": "SoftwareApplication",
       "identifier": "glue",
       "name": "glue",
@@ -162,7 +163,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=glue"
     },
-    {
+    "6": {
       "@type": "SoftwareApplication",
       "identifier": "here",
       "name": "here",
@@ -174,7 +175,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=here"
     },
-    {
+    "7": {
       "@type": "SoftwareApplication",
       "identifier": "jsonlite",
       "name": "jsonlite",
@@ -186,7 +187,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=jsonlite"
     },
-    {
+    "8": {
       "@type": "SoftwareApplication",
       "identifier": "purrr",
       "name": "purrr",
@@ -198,7 +199,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=purrr"
     },
-    {
+    "9": {
       "@type": "SoftwareApplication",
       "identifier": "xfun",
       "name": "xfun",
@@ -209,19 +210,13 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=xfun"
-    }
-  ],
-  "readme": "https://github.com/ropensci/gitignore/blob/main/README.md",
-  "contIntegration": ["https://app.codecov.io/gh/ropensci/gitignore?branch=main", "https://github.com/ropensci/gitignore/actions"],
-  "releaseNotes": "https://github.com/ropensci/gitignore/blob/master/NEWS.md",
-  "relatedLink": ["https://docs.ropensci.org/gitignore/", "https://CRAN.R-project.org/package=gitignore"],
-  "provider": {
-    "@id": "https://cran.r-project.org",
-    "@type": "Organization",
-    "name": "Comprehensive R Archive Network (CRAN)",
-    "url": "https://cran.r-project.org"
+    },
+    "SystemRequirements": null
   },
-  "fileSize": "72.61KB",
+  "fileSize": "65.703KB",
+  "releaseNotes": "https://github.com/ropensci/gitignore/blob/master/NEWS.md",
+  "readme": "https://github.com/ropensci/gitignore/blob/main/README.md",
+  "contIntegration": ["https://app.codecov.io/gh/ropensci/gitignore?branch=main", "https://github.com/PMassicotte/gitignore/actions"],
   "review": {
     "@type": "Review",
     "url": "https://github.com/ropensci/software-review/issues/303",

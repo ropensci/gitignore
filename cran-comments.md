@@ -1,9 +1,9 @@
-This patch fixes CRAN check results. Tests are now not performed when internet connection is not available.
+This patch addresses CRAN check issues by skipping or excluding code chunks in vignettes when the internet or the gitignore API is unavailable.
 
 ## Test environments
 
-* Ubuntu oldrel, release, devel
-* win-builder (devel and release)
+- Ubuntu oldrel, release, devel
+- win-builder (devel and release)
 
 ## R CMD check results
 
