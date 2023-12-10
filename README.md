@@ -14,7 +14,7 @@ coverage](https://codecov.io/gh/ropensci/gitignore/branch/main/graph/badge.svg)]
 [![DOI](https://zenodo.org/badge/184759416.svg)](https://zenodo.org/badge/latestdoi/184759416)
 [![rOpenSci
 peer-review](https://badges.ropensci.org/303_status.svg)](https://github.com/ropensci/software-review/issues/303)
-[![R-CMD-check](https://github.com/PMassicotte/gitignore/workflows/R-CMD-check/badge.svg)](https://github.com/PMassicotte/gitignore/actions)
+[![R-CMD-check](https://github.com/PMassicotte/gitignore/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/gitignore/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Based on the definition proposed by
@@ -84,7 +84,6 @@ Templates can be fetched using the `gi_fetch_templates()` function.
 
 ``` r
 gi_fetch_templates("R")
-
 # Created by https://www.toptal.com/developers/gitignore/api/r
 # Edit at https://www.toptal.com/developers/gitignore?templates=r
 
@@ -95,6 +94,7 @@ gi_fetch_templates("R")
 
 # Session Data files
 .RData
+.RDataTmp
 
 # User-specific files
 .Ruserdata
@@ -135,6 +135,9 @@ docs/
 # translation temp files
 po/*~
 
+# RStudio Connect folder
+rsconnect/
+
 ### R.Bookdown Stack ###
 # R package: bookdown caching files
 /*_files/
@@ -146,7 +149,6 @@ Multiple templates can be fetched by specifying multiple values:
 
 ``` r
 gi_fetch_templates(c("java", "c++"))
-
 # Created by https://www.toptal.com/developers/gitignore/api/java,c++
 # Edit at https://www.toptal.com/developers/gitignore?templates=java,c++
 
@@ -208,6 +210,7 @@ gi_fetch_templates(c("java", "c++"))
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+replay_pid*
 
 # End of https://www.toptal.com/developers/gitignore/api/java,c++
 ```

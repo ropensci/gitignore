@@ -21,8 +21,8 @@ Description: Simple interface to query gitignore.io to fetch
     gitignore templates that can be included in the .gitignore file. More
     than 450 templates are currently available.
 License: GPL-3
-URL: https://docs.ropensci.org/gitignore/, https://github.com/ropensci/gitignore, https://github.com/PMassicotte/gitignore
-BugReports: https://github.com/PMassicotte/gitignore/issues
+URL: https://docs.ropensci.org/gitignore/, https://github.com/ropensci/gitignore, https://github.com/ropensci/gitignore
+BugReports: https://github.com/ropensci/gitignore/issues
 Imports: 
     clipr,
     clisymbols,
