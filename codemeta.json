@@ -213,7 +213,7 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "65.748KB",
+  "fileSize": "65.928KB",
   "releaseNotes": "https://github.com/ropensci/gitignore/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/gitignore/blob/main/README.md",
   "contIntegration": ["https://app.codecov.io/gh/ropensci/gitignore?branch=main", "https://github.com/PMassicotte/gitignore/actions/workflows/R-CMD-check.yaml"],

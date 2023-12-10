@@ -15,6 +15,19 @@ knitr::opts_chunk$set(
 
 ```
 
+```{r, echo = FALSE}
+is_url_available <- function() {
+  con <- url("https://www.toptal.com/developers/gitignore")
+  check <- suppressWarnings(
+    try(open.connection(con, open = "rt", timeout = 2), silent = TRUE)[1]
+  )
+  suppressWarnings(try(close.connection(con), silent = TTRUE))
+  ifelse(is.null(check), TRUE, FALSE)
+}
+
+```
+
+
 ## Basic idea
 
 Based on the definition proposed by [freecodecamp](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/):
