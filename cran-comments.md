@@ -1,4 +1,4 @@
-This patch addresses CRAN check issues by skipping or excluding code chunks in vignettes when the internet or the gitignore API is unavailable.
+This patch resolves CRAN check issues by compiling vignettes locally to prevent CRAN errors in case the gitignore API is not accessible.
 
 ## Test environments
 
