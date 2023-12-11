@@ -7,25 +7,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
 
-```
-
-```{r, echo = FALSE}
-is_url_available <- function() {
-  con <- url("https://www.toptal.com/developers/gitignore")
-  check <- suppressWarnings(
-    try(open.connection(con, open = "rt", timeout = 2), silent = TRUE)[1]
-  )
-  suppressWarnings(try(close.connection(con), silent = TTRUE))
-  ifelse(is.null(check), TRUE, FALSE)
-}
-
-```
 
 
 ## Basic idea
@@ -43,43 +25,242 @@ For any project, it is therefore important to have a `.gitignore` file that is c
 
 ## Examples
 
-```{r setup}
+
+```r
 library(gitignore)
 ```
 
 Get the list of all available templates from [gitignore.io](https://www.toptal.com/developers/gitignore):
 
-```{r}
+
+```r
 head(gi_available_templates(), 50)
+#>  [1] "1c"                   "1c-bitrix"           
+#>  [3] "a-frame"              "actionscript"        
+#>  [5] "ada"                  "adobe"               
+#>  [7] "advancedinstaller"    "adventuregamestudio" 
+#>  [9] "agda"                 "al"                  
+#> [11] "alteraquartusii"      "altium"              
+#> [13] "amplify"              "android"             
+#> [15] "androidstudio"        "angular"             
+#> [17] "anjuta"               "ansible"             
+#> [19] "ansibletower"         "apachecordova"       
+#> [21] "apachehadoop"         "appbuilder"          
+#> [23] "appceleratortitanium" "appcode"             
+#> [25] "appcode+all"          "appcode+iml"         
+#> [27] "appengine"            "aptanastudio"        
+#> [29] "arcanist"             "archive"             
+#> [31] "archives"             "archlinuxpackages"   
+#> [33] "asdf"                 "aspnetcore"          
+#> [35] "assembler"            "astro"               
+#> [37] "ate"                  "atmelstudio"         
+#> [39] "ats"                  "audio"               
+#> [41] "autohotkey"           "automationstudio"    
+#> [43] "autotools"            "autotools+strict"    
+#> [45] "awr"                  "azurefunctions"      
+#> [47] "azurite"              "backup"              
+#> [49] "ballerina"            "basercms"
 ```
 
 The function `gi_fetch_templates()` can be used to fetch particular template(s). For example, one could want to get the `java` and `c++` templates as follow:
 
-```{r, eval=is_url_available()}
+
+```r
 gi_fetch_templates(c("java", "c++"))
+#> # Created by https://www.toptal.com/developers/gitignore/api/java,c++
+#> # Edit at https://www.toptal.com/developers/gitignore?templates=java,c++
+#> 
+#> ### C++ ###
+#> # Prerequisites
+#> *.d
+#> 
+#> # Compiled Object files
+#> *.slo
+#> *.lo
+#> *.o
+#> *.obj
+#> 
+#> # Precompiled Headers
+#> *.gch
+#> *.pch
+#> 
+#> # Compiled Dynamic libraries
+#> *.so
+#> *.dylib
+#> *.dll
+#> 
+#> # Fortran module files
+#> *.mod
+#> *.smod
+#> 
+#> # Compiled Static libraries
+#> *.lai
+#> *.la
+#> *.a
+#> *.lib
+#> 
+#> # Executables
+#> *.exe
+#> *.out
+#> *.app
+#> 
+#> ### Java ###
+#> # Compiled class file
+#> *.class
+#> 
+#> # Log file
+#> *.log
+#> 
+#> # BlueJ files
+#> *.ctxt
+#> 
+#> # Mobile Tools for Java (J2ME)
+#> .mtj.tmp/
+#> 
+#> # Package Files #
+#> *.jar
+#> *.war
+#> *.nar
+#> *.ear
+#> *.zip
+#> *.tar.gz
+#> *.rar
+#> 
+#> # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+#> hs_err_pid*
+#> replay_pid*
+#> 
+#> # End of https://www.toptal.com/developers/gitignore/api/java,c++
 ```
 
 By default, the template(s) are not copied into the clipboard, this can be changed by setting `copy_to_clipboard = TRUE`:
 
-```{r, eval=FALSE}
+
+```r
 gi_fetch_templates(c("java", "c++"), copy_to_clipboard = TRUE)
 ```
 
 Additionally, you can tell `gi_fetch_templates()` to append automatically the `.gitignore` file in your project by setting `append_gitignore = TRUE`:
 
-```{r, eval=FALSE}
+
+```r
 gi_fetch_templates(c("R"), append_gitignore = TRUE)
 ```
 
 It is also possible to specify the `.gitignore` file to be modified by specifying the `gitignore_file` argument.
 
-```{r, message=TRUE, eval=is_url_available()}
+
+```r
 f <- file.path(tempdir(), ".gitignore")
 
 file.create(f)
+#> [1] TRUE
 
 gi_fetch_templates("R", gitignore_file = f, append_gitignore = TRUE)
+#> # Created by https://www.toptal.com/developers/gitignore/api/r
+#> # Edit at https://www.toptal.com/developers/gitignore?templates=r
+#> 
+#> ### R ###
+#> # History files
+#> .Rhistory
+#> .Rapp.history
+#> 
+#> # Session Data files
+#> .RData
+#> .RDataTmp
+#> 
+#> # User-specific files
+#> .Ruserdata
+#> 
+#> # Example code in package build process
+#> *-Ex.R
+#> 
+#> # Output files from R CMD build
+#> /*.tar.gz
+#> 
+#> # Output files from R CMD check
+#> /*.Rcheck/
+#> 
+#> # RStudio files
+#> .Rproj.user/
+#> 
+#> # produced vignettes
+#> vignettes/*.html
+#> vignettes/*.pdf
+#> 
+#> # OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+#> .httr-oauth
+#> 
+#> # knitr and R markdown default cache directories
+#> *_cache/
+#> /cache/
+#> 
+#> # Temporary files created by R markdown
+#> *.utf8.md
+#> *.knit.md
+#> 
+#> # R Environment Variables
+#> .Renviron
+#> 
+#> # pkgdown site
+#> docs/
+#> 
+#> # translation temp files
+#> po/*~
+#> 
+#> # RStudio Connect folder
+#> rsconnect/
+#> 
+#> ### R.Bookdown Stack ###
+#> # R package: bookdown caching files
+#> /*_files/
+#> 
+#> # End of https://www.toptal.com/developers/gitignore/api/r
+#> ● .gitignore file successfully modified.
 
 readLines(f)
+#>  [1] "# Created by https://www.toptal.com/developers/gitignore/api/r"      
+#>  [2] "# Edit at https://www.toptal.com/developers/gitignore?templates=r"   
+#>  [3] ""                                                                    
+#>  [4] "### R ###"                                                           
+#>  [5] "# History files"                                                     
+#>  [6] ".Rhistory"                                                           
+#>  [7] ".Rapp.history"                                                       
+#>  [8] "# Session Data files"                                                
+#>  [9] ".RData"                                                              
+#> [10] ".RDataTmp"                                                           
+#> [11] "# User-specific files"                                               
+#> [12] ".Ruserdata"                                                          
+#> [13] "# Example code in package build process"                             
+#> [14] "*-Ex.R"                                                              
+#> [15] "# Output files from R CMD build"                                     
+#> [16] "/*.tar.gz"                                                           
+#> [17] "# Output files from R CMD check"                                     
+#> [18] "/*.Rcheck/"                                                          
+#> [19] "# RStudio files"                                                     
+#> [20] ".Rproj.user/"                                                        
+#> [21] "# produced vignettes"                                                
+#> [22] "vignettes/*.html"                                                    
+#> [23] "vignettes/*.pdf"                                                     
+#> [24] "# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3"
+#> [25] ".httr-oauth"                                                         
+#> [26] "# knitr and R markdown default cache directories"                    
+#> [27] "*_cache/"                                                            
+#> [28] "/cache/"                                                             
+#> [29] "# Temporary files created by R markdown"                             
+#> [30] "*.utf8.md"                                                           
+#> [31] "*.knit.md"                                                           
+#> [32] "# R Environment Variables"                                           
+#> [33] ".Renviron"                                                           
+#> [34] "# pkgdown site"                                                      
+#> [35] "docs/"                                                               
+#> [36] "# translation temp files"                                            
+#> [37] "po/*~"                                                               
+#> [38] "# RStudio Connect folder"                                            
+#> [39] "rsconnect/"                                                          
+#> [40] "### R.Bookdown Stack ###"                                            
+#> [41] "# R package: bookdown caching files"                                 
+#> [42] "/*_files/"                                                           
+#> [43] "# End of https://www.toptal.com/developers/gitignore/api/r"
 ```
 

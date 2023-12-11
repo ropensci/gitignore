@@ -1,0 +1,80 @@
+---
+title: "Introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+```
+```{r, eval=FALSE, echo=FALSE}
+
+# Use this to create the vignette to prevent CRAN checks from failing when
+# gitignore API is not available.
+
+# https://ropensci.org/blog/2019/12/08/precompute-vignettes/
+knitr::knit("vignettes/introduction.Rmd.orig", "vignettes/introduction.Rmd")
+```
+
+## Basic idea
+
+Based on the definition proposed by [freecodecamp](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/):
+
+> The .gitignore file is a text file that tells Git which files or folders to ignore in a project. A local .gitignore file is usually placed in the root directory of a project. You can also create a global .gitignore file and any entries in that file will be ignored in all of your Git repositories.
+
+For any project, it is therefore important to have a `.gitignore` file that is complete and accurate. The package `gitignore` provides a simple R interface to the [gitignore.io](https://www.toptal.com/developers/gitignore) API. It can be used to fetch gitignore templates that can be included into the `.gitignore` file of you git repository. The `gitignore` R package can be used with R package, R Studio project or with any `.gitignore` file. Note that by default, the `usethis` package populates the `.gitignore` for the R language when you create a R project. However, it is common to use many different programming languages in a project such as `LaTeX`, `python`, `matlab`, `julia` and so on. This is where the `gitignore` package shines as it can be used to programmatically modify the `.gitignore` file of your project.
+
+`gitignore` is a simple R package that provide an interface to query [gitignore.io](https://www.toptal.com/developers/gitignore) to fetch gitignore templates that can be included in the .gitignore file. More than 450 templates are currently available. There are actually two functions in the package:
+
+- `gi_available_templates()`: to get a list of all templates available on [gitignore.io](https://www.toptal.com/developers/gitignore).
+- `gi_fetch_templates()`: to get one or more template(s). This function can copy the returned template(s) in the clipboard as well as happening the the `.gitignore` file in your project directory.
+
+## Examples
+
+```{r setup}
+library(gitignore)
+```
+
+Get the list of all available templates from [gitignore.io](https://www.toptal.com/developers/gitignore):
+
+```{r}
+head(gi_available_templates(), 50)
+```
+
+The function `gi_fetch_templates()` can be used to fetch particular template(s). For example, one could want to get the `java` and `c++` templates as follow:
+
+```{r}
+gi_fetch_templates(c("java", "c++"))
+```
+
+By default, the template(s) are not copied into the clipboard, this can be changed by setting `copy_to_clipboard = TRUE`:
+
+```{r, eval=FALSE}
+gi_fetch_templates(c("java", "c++"), copy_to_clipboard = TRUE)
+```
+
+Additionally, you can tell `gi_fetch_templates()` to append automatically the `.gitignore` file in your project by setting `append_gitignore = TRUE`:
+
+```{r, eval=FALSE}
+gi_fetch_templates(c("R"), append_gitignore = TRUE)
+```
+
+It is also possible to specify the `.gitignore` file to be modified by specifying the `gitignore_file` argument.
+
+```{r, message=TRUE}
+f <- file.path(tempdir(), ".gitignore")
+
+file.create(f)
+
+gi_fetch_templates("R", gitignore_file = f, append_gitignore = TRUE)
+
+readLines(f)
+```
+
