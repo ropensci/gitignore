@@ -59,9 +59,9 @@ devtools::install_github("ropensci/gitignore")
 
 There are currently two useful functions in the package:
 
--   `gi_available_templates()` to fetch all supported gitignore
+  - `gi_available_templates()` to fetch all supported gitignore
     templates.
--   `gi_fetch_templates()` to fetch one or many gitignore templates.
+  - `gi_fetch_templates()` to fetch one or many gitignore templates.
 
 Show the first 25 templates returned by `gi_available_templates()`.
 
@@ -245,4 +245,4 @@ Conduct](https://docs.ropensci.org/gitignore/CODE_OF_CONDUCT.html). By
 project](https://docs.ropensci.org/gitignore/CONTRIBUTING.html), you
 agree to abide by its terms.
 
-[![ropensci_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)
+[![ropensci\_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)
