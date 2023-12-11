@@ -1,4 +1,4 @@
-# gitignore (development version)
+# gitignore 0.1.6
 
 - Skip or do not execute code chunks in vignettes if the internet or the gitignore API is not available, to fix CRAN problems.
 - Update workflow link to point to the v2 branch of r-lib/actions repository.
