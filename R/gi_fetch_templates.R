@@ -42,9 +42,10 @@ gi_fetch_templates <-
     i <- template_name %in% l
 
     if (!all(i)) {
-      stop(
-        "Some template_name were not found on gitignore.io: ",
-        crayon::red$bold(paste(template_name[!i], collapse = ", "))
+      # https://cli.r-lib.org/reference/cli_div.html
+      cli::cli_div(theme = list(span.emph = list(color = "red", "font-weight" = "bold")))
+      cli::cli_abort(
+        "Some template_name were not found on gitignore.io: {.emph {template_name[!i]}}.",
       )
     }
 
@@ -56,17 +57,15 @@ gi_fetch_templates <-
     )
 
     if (r$status_code != 200) {
-      stop(paste("http request failed with status code:"), r$status_code)
+      cli::cli_abort("http request failed with status code: {r$status_code}")
     }
 
     # Copy or not into the clipboard
     if (clipr::clipr_available() && copy_to_clipboard) { # nocov start
       clipr::write_clip(rawToChar(r$content))
-      message(
-        crayon::green(clisymbols::symbol$bullet),
-        paste(
-          " Copied to the clipboard.",
-          "You can now paste it in your .gitignore file.\n"
+      cli::cli_inform(c(
+        "v" = "Copied to the clipboard.
+             You can now paste it in your {.file .gitignore}"
         )
       ) # nocov end
     } else {
