@@ -1,6 +1,6 @@
 # gitignore (development version)
 
-- gitignore now provides clickable links as it uses cli instead of crayon.
+- gitignore now provides clickable links as it uses cli instead of crayon (@olivroy).
 
 # gitignore 0.1.6
 
