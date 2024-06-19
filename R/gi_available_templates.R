@@ -15,13 +15,13 @@ gi_available_templates <-
     res <- curl::curl_fetch_memory(url)
 
     if (res$status_code != 200) {
-      stop(paste("http request failed with status code:"), res$status_code)
+      cli::cli_abort("http request failed with status code: {res$status_code}")
     }
 
     json_text <- rawToChar(res$content)
 
     if (!jsonlite::validate(json_text)) {
-      stop("Invalid json file returned in gi_available_templates() function.")
+      cli::cli_abort("Invalid json file returned in gi_available_templates() function.")
     }
 
     r <- jsonlite::fromJSON(json_text)

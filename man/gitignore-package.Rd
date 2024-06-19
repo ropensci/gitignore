@@ -13,7 +13,6 @@ Useful links:
 \itemize{
   \item \url{https://docs.ropensci.org/gitignore/}
   \item \url{https://github.com/ropensci/gitignore}
-  \item \url{https://github.com/ropensci/gitignore}
   \item Report bugs at \url{https://github.com/ropensci/gitignore/issues}
 }
 

@@ -24,13 +24,11 @@ gi_write_gitignore <-
     stopifnot(basename(gitignore_file) == ".gitignore")
 
     if (!file.exists(gitignore_file)) { # nocov start
-      message(
-        crayon::red(clisymbols::symbol$bullet),
-        " The .gitignore file could not be found in the project directory",
-        here::here(),
-        "Would you like to create it?",
-        "\n"
-      )
+      cli::cli_inform(c(
+        "x" = "The .gitignore file could not be found in the
+        project directory {.path {here::here()}}",
+        i = "Would you like to create it?"
+      ))
 
       response <- utils::menu(c("Yes", "No"))
 
@@ -39,9 +37,8 @@ gi_write_gitignore <-
         file.create(gitignore_file)
 
       } else {
-        stop(
-         "Could not find the file: ",
-          crayon::red$bold(gitignore_file)
+        cli::cli_abort(
+         "Could not find the file: {.file {gitignore_file}}",
         )
       }
     } # nocov end
@@ -54,10 +51,9 @@ gi_write_gitignore <-
     new <- setdiff(fetched_template_splitted, existing_lines)
 
     if (length(new) == 0) {
-      message(
-        crayon::yellow(clisymbols::symbol$bullet),
-        " Nothing to be modified in the .gitignore file.\n"
-      )
+      cli::cli_inform(c(
+        "!" = "Nothing to be modified in the {.file .gitignore} file."
+      ))
       return(FALSE)
     }
 
@@ -65,10 +61,9 @@ gi_write_gitignore <-
 
     xfun::write_utf8(all, gitignore_file)
 
-    message(
-      crayon::green(clisymbols::symbol$bullet),
-      " .gitignore file successfully modified.\n"
-    )
+    cli::cli_inform(c(
+      "v" = "{.file .gitignore} file successfully modified."
+    ))
 
     invisible(TRUE)
   }

@@ -1,5 +1,7 @@
 # gitignore (development version)
 
+- gitignore now provides clickable links as it uses cli instead of crayon.
+
 # gitignore 0.1.6
 
 - Skip or do not execute code chunks in vignettes if the internet or the gitignore API is not available, to fix CRAN problems.
@@ -13,7 +15,7 @@
 
 # gitignore 0.1.4
 
-- Change backend from https://www.gitignore.io/ to https://www.toptal.com/developers/gitignore as the former now redirects to the later (#13 @pat-s).
+- Change backend from https://www.gitignore.io/ to https://www.toptal.com/developers/gitignore as the former now redirects to the latter (#13 @pat-s).
 
 - Use `file.path()` instead of `paste0()` to build path. @dpprdan
 

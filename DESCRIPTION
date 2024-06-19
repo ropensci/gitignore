@@ -21,12 +21,11 @@ Description: Simple interface to query gitignore.io to fetch
     gitignore templates that can be included in the .gitignore file. More
     than 450 templates are currently available.
 License: GPL-3
-URL: https://docs.ropensci.org/gitignore/, https://github.com/ropensci/gitignore, https://github.com/ropensci/gitignore
+URL: https://docs.ropensci.org/gitignore/, https://github.com/ropensci/gitignore
 BugReports: https://github.com/ropensci/gitignore/issues
 Imports: 
+    cli,
     clipr,
-    clisymbols,
-    crayon,
     curl,
     glue,
     here,
@@ -44,4 +43,4 @@ VignetteBuilder:
 Encoding: UTF-8
 Language: en-US
 LazyData: true
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
