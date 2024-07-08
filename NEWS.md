@@ -13,7 +13,7 @@
 
 # gitignore 0.1.5
 
-- Using Github Actions for continuous integration.
+- Using GitHub Actions for continuous integration.
 
 - Fixing CRAN check results where tests failed when internet connection was not available (#18).
 
