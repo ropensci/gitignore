@@ -4,7 +4,7 @@
 
 - Upgrading to use Bootstrap 5.
 
-- Add ligth and dark themes to the vignette.
+- Add light and dark themes to the vignette.
 
 # gitignore 0.1.6
 
