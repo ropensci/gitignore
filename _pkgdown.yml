@@ -1,1 +1,5 @@
+url: https://docs.ropensci.org/gitignore/
+template:
+  bootstrap: 5
+  light-switch: true
 destination: docs

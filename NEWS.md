@@ -2,6 +2,10 @@
 
 - gitignore now provides clickable links as it uses cli instead of crayon (@olivroy).
 
+- Upgrading to use Bootstrap 5.
+
+- Add ligth and dark themes to the vignette.
+
 # gitignore 0.1.6
 
 - Skip or do not execute code chunks in vignettes if the internet or the gitignore API is not available, to fix CRAN problems.
