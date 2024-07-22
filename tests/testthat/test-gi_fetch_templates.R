@@ -1,6 +1,3 @@
-# is_clipr_available <- clipr::clipr_available(allow_non_interactive = TRUE)
-# skip_msg <- "System clipboard is not available - skipping test."
-
 test_that("gi_fetch_templates inputs", {
   skip_on_cran()
   skip_if_offline()
