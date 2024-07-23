@@ -19,8 +19,7 @@
 #' }
 gi_write_gitignore <-
   function(fetched_template,
-             gitignore_file = here::here(".gitignore")) {
-
+           gitignore_file = here::here(".gitignore")) {
     stopifnot(basename(gitignore_file) == ".gitignore")
 
     if (!file.exists(gitignore_file)) { # nocov start
@@ -32,13 +31,11 @@ gi_write_gitignore <-
 
       response <- utils::menu(c("Yes", "No"))
 
-      if (response == 1) {
-
+      if (response == 1L) {
         file.create(gitignore_file)
-
       } else {
         cli::cli_abort(
-         "Could not find the file: {.file {gitignore_file}}",
+          "Could not find the file: {.file {gitignore_file}}"
         )
       }
     } # nocov end
@@ -46,11 +43,15 @@ gi_write_gitignore <-
     existing_lines <-
       readLines(gitignore_file, warn = FALSE, encoding = "UTF-8")
 
-    fetched_template_splitted <- unlist(strsplit(fetched_template, "\n"))
+    fetched_template_splitted <- unlist(strsplit(
+      fetched_template,
+      "\n",
+      fixed = TRUE
+    ))
 
     new <- setdiff(fetched_template_splitted, existing_lines)
 
-    if (length(new) == 0) {
+    if (length(new) == 0L) {
       cli::cli_inform(c(
         "!" = "Nothing to be modified in the {.file .gitignore} file."
       ))

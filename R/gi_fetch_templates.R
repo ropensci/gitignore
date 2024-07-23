@@ -43,9 +43,11 @@ gi_fetch_templates <-
 
     if (!all(i)) {
       # https://cli.r-lib.org/reference/cli_div.html
-      cli::cli_div(theme = list(span.emph = list(color = "red", "font-weight" = "bold")))
+      cli::cli_div(
+        theme = list(span.emph = list(color = "red", "font-weight" = "bold"))
+      )
       cli::cli_abort(
-        "Some template_name were not found on gitignore.io: {.emph {template_name[!i]}}.",
+        "Some template_name were not found on gitignore.io: {.emph {template_name[!i]}}."
       )
     }
 
@@ -56,25 +58,24 @@ gi_fetch_templates <-
       glue::glue("{backend_url()}/api/{template_name}")
     )
 
-    if (r$status_code != 200) {
+    if (r[["status_code"]] != 200L) {
       cli::cli_abort("http request failed with status code: {r$status_code}")
     }
 
     # Copy or not into the clipboard
     if (clipr::clipr_available() && copy_to_clipboard) { # nocov start
-      clipr::write_clip(rawToChar(r$content))
+      clipr::write_clip(rawToChar(r[["content"]]))
       cli::cli_inform(c(
         "v" = "Copied to the clipboard.
              You can now paste it in your {.file .gitignore}"
-        )
-      ) # nocov end
+      )) # nocov end
     } else {
-      cat(rawToChar(r$content))
+      cat(rawToChar(r[["content"]]))
     }
 
     if (append_gitignore) {
-      gi_write_gitignore(rawToChar(r$content), gitignore_file)
+      gi_write_gitignore(rawToChar(r[["content"]]), gitignore_file)
     }
 
-    invisible(rawToChar(r$content))
+    invisible(rawToChar(r[["content"]]))
   }
