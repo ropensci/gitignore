@@ -1,5 +1,7 @@
 # gitignore (development version)
 
+- Use testthat edition 3 (@jrdnbradford).
+
 # gitignore 0.1.7
 
 - gitignore now provides clickable links as it uses cli instead of crayon (@olivroy).
