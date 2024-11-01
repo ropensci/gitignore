@@ -13,7 +13,7 @@
 #' @return A character containing gitignore template(s).
 #' @export
 #'
-#' @examples
+#' @examplesIf curl::has_internet()
 #' # Fetch template for the R language
 #' gi_fetch_templates("R")
 #'

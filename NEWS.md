@@ -2,6 +2,8 @@
 
 - Use testthat edition 3 (@jrdnbradford).
 
+- Do not run examples if internet is not available.
+
 # gitignore 0.1.7
 
 - gitignore now provides clickable links as it uses cli instead of crayon (@olivroy).
