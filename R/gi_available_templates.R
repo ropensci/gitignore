@@ -7,7 +7,7 @@
 #' @return A character with all templates supported by gitignore.io.
 #' @export
 #'
-#' @examples
+#' @examplesIf curl::has_internet()
 #' gi_available_templates()
 gi_available_templates <-
   function() {

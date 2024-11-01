@@ -1,3 +1,5 @@
+This fix an issue reported by CRAN where examples failed to run when internet was not available.
+
 ## Test environments
 
 - os: macos-latest, r: "release"
@@ -16,5 +18,5 @@
 
 We checked 0 reverse dependencies, comparing R CMD check results across CRAN and dev versions of this package.
 
- * We saw 0 new problems
- * We failed to check 0 packages
+- We saw 0 new problems
+- We failed to check 0 packages

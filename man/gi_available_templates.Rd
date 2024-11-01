@@ -16,5 +16,7 @@ This return list of all templates supported by gitignore.io.
 The returned list is returned as lower case characters.
 }
 \examples{
+\dontshow{if (curl::has_internet()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 gi_available_templates()
+\dontshow{\}) # examplesIf}
 }

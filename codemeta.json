@@ -8,13 +8,13 @@
   "codeRepository": "https://github.com/ropensci/gitignore",
   "issueTracker": "https://github.com/ropensci/gitignore/issues",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "0.1.5.9000",
+  "version": "0.1.7.9000",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.3.2 (2023-10-31)",
+  "runtimePlatform": "R version 4.4.1 (2024-06-14)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -92,7 +92,7 @@
       "@type": "SoftwareApplication",
       "identifier": "testthat",
       "name": "testthat",
-      "version": ">= 2.1.0",
+      "version": ">= 3.0.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -105,6 +105,18 @@
   "softwareRequirements": {
     "1": {
       "@type": "SoftwareApplication",
+      "identifier": "cli",
+      "name": "cli",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=cli"
+    },
+    "2": {
+      "@type": "SoftwareApplication",
       "identifier": "clipr",
       "name": "clipr",
       "provider": {
@@ -115,31 +127,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=clipr"
     },
-    "2": {
-      "@type": "SoftwareApplication",
-      "identifier": "clisymbols",
-      "name": "clisymbols",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=clisymbols"
-    },
     "3": {
-      "@type": "SoftwareApplication",
-      "identifier": "crayon",
-      "name": "crayon",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=crayon"
-    },
-    "4": {
       "@type": "SoftwareApplication",
       "identifier": "curl",
       "name": "curl",
@@ -151,7 +139,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=curl"
     },
-    "5": {
+    "4": {
       "@type": "SoftwareApplication",
       "identifier": "glue",
       "name": "glue",
@@ -163,7 +151,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=glue"
     },
-    "6": {
+    "5": {
       "@type": "SoftwareApplication",
       "identifier": "here",
       "name": "here",
@@ -175,7 +163,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=here"
     },
-    "7": {
+    "6": {
       "@type": "SoftwareApplication",
       "identifier": "jsonlite",
       "name": "jsonlite",
@@ -187,7 +175,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=jsonlite"
     },
-    "8": {
+    "7": {
       "@type": "SoftwareApplication",
       "identifier": "purrr",
       "name": "purrr",
@@ -199,7 +187,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=purrr"
     },
-    "9": {
+    "8": {
       "@type": "SoftwareApplication",
       "identifier": "xfun",
       "name": "xfun",
@@ -213,10 +201,10 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "66.01KB",
+  "fileSize": "70.829KB",
   "releaseNotes": "https://github.com/ropensci/gitignore/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/gitignore/blob/main/README.md",
-  "contIntegration": ["https://app.codecov.io/gh/ropensci/gitignore?branch=main", "https://github.com/PMassicotte/gitignore/actions/workflows/R-CMD-check.yaml"],
+  "contIntegration": ["https://app.codecov.io/gh/ropensci/gitignore?branch=main", "https://github.com/ropensci/gitignore/actions/workflows/R-CMD-check.yaml"],
   "review": {
     "@type": "Review",
     "url": "https://github.com/ropensci/software-review/issues/303",

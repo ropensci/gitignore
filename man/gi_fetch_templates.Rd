@@ -32,6 +32,7 @@ A character containing gitignore template(s).
 Fetch gitignore template(s) from gitignore.io
 }
 \examples{
+\dontshow{if (curl::has_internet()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 # Fetch template for the R language
 gi_fetch_templates("R")
 
@@ -40,4 +41,5 @@ gi_fetch_templates(c("R", "python", "java"))
 
 # The .gitignore file can be automatically modified with `append_gitignore = TRUE`
 gi_fetch_templates(c("R", "python", "java"))
+\dontshow{\}) # examplesIf}
 }
