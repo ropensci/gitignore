@@ -1,7 +1,7 @@
 Type: Package
 Package: gitignore
 Title: Create Useful .gitignore Files for your Project
-Version: 0.1.8
+Version: 0.1.8.9000
 Authors@R: 
     c(person(given = "Philippe",
              family = "Massicotte",

@@ -1,3 +1,5 @@
+# gitignore (development version)
+
 # gitignore 0.1.8
 
 - Use testthat edition 3 (@jrdnbradford).
